@@ -1,0 +1,45 @@
+.user-menu {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.user-menu__item {
+  width: 300px;
+  padding: 0 10px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: left;
+
+  &--01 {
+    background-color: #f7811d;
+    background-image: url("../img/transfer_mobile.png");
+    background-position-x: 7px;
+  }
+
+  &--02 {
+    background-color: #3dc082;
+    background-image: url("../img/pay_mobile.png");
+    background-position-x: 40px;
+  }
+
+  &--03 {
+    background-color: #c55457;
+    background-image: url("../img/enter_mobile.png");
+    background-position-x: 7px;
+  }
+
+  &--04 {
+    background-color: #66c4e7;
+    background-image: url("../img/mode_mobile.png");
+    background-position-x: 15px;
+  }
+}
+
+.user-menu__link {
+  color: white;
+  width: 150px;
+  display: block;
+  padding-left: 140px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

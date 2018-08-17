@@ -1,0 +1,28 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__title {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.gallery__list-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gallery__list {
+  display: flex;
+}
+
+.gallery__img {
+  width: 320px;
+  box-sizing: border-box;
+}

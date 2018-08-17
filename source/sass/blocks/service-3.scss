@@ -1,0 +1,45 @@
+.service-3 {
+  background-color: #fff7f1;
+}
+
+.service-3__title {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.service-3__description {
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  width: 280px;
+}
+
+.service-3__list-wrapper {
+  width: 160px;
+  overflow: visible;
+  margin: 50px auto;
+  padding-bottom: 50px;
+  margin-bottom: 0;
+}
+
+.service-3__list {
+  width: 320px;
+  overflow: hidden;
+  display: flex;
+  margin-left: -80px;
+}
+
+.service-3__item {
+  &:first-child {
+    margin-left: -80px;
+  }
+}
+
+.service-3__img {
+  width: 160px;
+  box-sizing: border-box;
+}

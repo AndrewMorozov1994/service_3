@@ -1,0 +1,55 @@
+.our-houses {
+  background-image: url("../../img/our_houses_background.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 560px;
+}
+
+.our-houses__title {
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.our-houses__link {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 24px;
+    background-image: url("../img/our_houses_pin.png");
+    margin-right: 10px;
+  }
+
+  span {
+    padding-bottom: 5px;
+    border-bottom: 1px dashed white;
+  }
+}
+
+.our-houses__sub-title {
+  color: white;
+  text-align: center;
+  width: 280px;
+  min-width: 280px;
+  margin: 10px auto;
+  display: block;
+  margin-top: 30px;
+}
+
+.our-houses__description {
+  color: white;
+  text-align: center;
+  width: 280px;
+  min-width: 280px;
+  font-size: 18px;
+  margin: 10px auto;
+  display: block;
+}

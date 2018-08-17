@@ -1,0 +1,45 @@
+.slider-arrow {
+  width: 162px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 20px;
+
+  &--gallery {
+    order: 3;
+  }
+}
+
+.slider-arrow__btn {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 1px solid #cfd7e4;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--next {
+    border-left: none;
+    background-image: url("../img/slider_arrow_next_grey.png");
+  }
+
+  &--back {
+    background-image: url("../img/slider_arrow_back_grey.png");
+  }
+}
+
+.slider-arrow--our-houses {
+  margin-top: 30px;
+
+  .slider-arrow__btn {
+    border: 1px solid white;
+
+    &--next {
+      border-left: none;
+      background-image: url("../img/slider_arrow_next_white.png");
+    }
+
+    &--back {
+      background-image: url("../img/slider_arrow_back_white.png");
+    }
+  }
+}
