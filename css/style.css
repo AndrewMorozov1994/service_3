@@ -713,7 +713,7 @@ template {
       background-image: url("../img/slider_arrow_back_white.png"); }
 
 .our-houses {
-  background-image: url("../../img/our_houses_background.jpg");
+  background-image: url("../img/our_houses_background.jpg");
   background-position: top;
   background-repeat: no-repeat;
   min-height: 560px; }
