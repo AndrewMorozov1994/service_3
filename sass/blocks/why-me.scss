@@ -1,0 +1,82 @@
+.why-me {
+  background-color: #fff7f1;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.why-me__title {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  padding: 0 10px;
+  padding-top: 40px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.why-me__list {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.why-me__item {
+  width: 300px;
+  height: 135px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      display: block;
+      content: "";
+      min-width: 75px;
+      height: 75px;
+      margin-right: 26px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.why-me__icon-01 {
+  &::before {
+    background-image: url("../img/why_me_01.png");
+  }
+}
+
+.why-me__icon-02  {
+  &::before {
+    background-image: url("../img/why_me_02.png");
+  }
+}
+
+.why-me__icon-03 {
+  &::before {
+    background-image: url("../img/why_me_03.png");
+  }
+}
+
+.why-me__icon-04 {
+  &::before {
+    background-image: url("../img/why_me_04.png");
+  }
+}
+
+.why-me__icon-05 {
+  &::before {
+    background-image: url("../img/why_me_05.png");
+  }
+}
+
+.why-me__icon-06 {
+  &::before {
+    background-image: url("../img/why_me_06.png");
+  }
+}

@@ -30,8 +30,8 @@
             </li>
         </ul>
         <ul class="header-popup-item__list list-style-none">
-            <li class="header-popup-item__item ">
-                <a href="" class="header-popup-item__link">
+            <li class="header-popup-item__item  ">
+                <a href="" class="header-popup-item__link ">
                     <div class="header-popup-item__img  header-popup-item__img--01"></div>
                     <p class="header-popup-item__description header-popup-item__description--closed">Оплата услуг ЖКХ</p>
                 </a>
@@ -51,7 +51,7 @@
         </ul>
         <nav class="header-menu">
             <button class="header-menu__btn header-menu__btn--opened" type="button"><span class="visually-hidden">Открыть</span></button>
-            <ul class="header-menu__list list-style-none">
+            <ul class="header-menu__list header-menu__list--closed list-style-none">
                 <li class="header-menu__item"><a href="#" class="header-menu__enter"><span>Вход</span></a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Главная</a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
@@ -66,7 +66,19 @@
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Обсуждения</a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Контакты</a></li>
             </ul>
+            <ul class="header-menu-user__list header-menu-user__list--closed list-style-none">
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--01" href="#">Оплата услуг ЖКХ</a></li>
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--02" href="#">Передать показания приборов учета</a></li>
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--03" href="#">Режим работы</a></li>
+          </ul>
         </nav>
+        <div class="header-search-wrapper">
+          <form action="#">
+            <label for="header-search"></label>
+            <input type="search" id="header-search">
+            <button class="visually-hidden" type="submit">Отправить</button>
+          </form>
+        </div>
     </header>
     <main>
         <nav class="main-menu">
@@ -111,7 +123,7 @@
                         <a href="#" class="user-menu__link"><span>Войти</span><br> в личный кабинет</a>
                     </li>
                     <li class="user-menu__item user-menu__item--04">
-                        <a href="#" class="user-menu__link">Режим <br>работы</a>
+                        <a href="#" class="user-menu__link"><span>Режим <br>работы</span></a>
                     </li>
                 </ul>
             </nav>
@@ -142,7 +154,7 @@
                       </li>
                   </ul>
                 </div>
-                <div class="slider-arrow">
+                <div class="slider-arrow slider-arrow--news">
                     <button class="slider-arrow__btn slider-arrow__btn--back" type="button"><span class="visually-hidden">Назад</span></button>
                     <button class="slider-arrow__btn slider-arrow__btn--next" type="button"><span class="visually-hidden">Вперед</span></button>
                 </div>
@@ -159,7 +171,7 @@
             </section>
             <section class="service-3">
                 <h2 class="service-3__title">“Сервис-3”</h2>
-                <p class="service-3__description">Мы входим в тройку крупнейших управляющих компаний Сургута. Мы обслуживаем жилфонд, в котором проживает почти 46 тысяч человек.</p>
+                <p class="service-3__description service-3__description--01">Мы входим в тройку крупнейших управляющих компаний Сургута. Мы обслуживаем жилфонд, в котором проживает почти 46 тысяч человек.</p>
                 <p class="service-3__description">Это тяжелая и ответственная работа — ежедневно делать все возможное, чтобы собственникам было комфортно и удобно жить в их домах. Но мы стараемся честно и профессионально выполнять свои обязанности. </p>
                 <div class="service-3__list-wrapper">
                   <ul class="service-3__list list-style-none">

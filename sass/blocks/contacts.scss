@@ -1,0 +1,59 @@
+.contacnts__list {
+  width: 300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.contacts__item-title {
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 25px;
+    margin-right: 15px;
+  }
+
+  &--01 {
+    &::before {
+      background-image: url("../img/contacts_01.png");
+    }
+  }
+
+  &--02 {
+    &::before {
+      background-image: url("../img/contacts_02.png");
+    }
+  }
+
+  &--03 {
+    &::before {
+      background-image: url("../img/contacts_03.png");
+    }
+  }
+
+  &--04 {
+    &::before {
+      background-image: url("../img/contacts_04.png");
+    }
+  }
+}
+
+.contacts__item-description {
+  color: #6f7886;
+  width: 180px;
+  margin: 0;
+  margin-left: 75px;
+
+
+  a {
+    color: #6f7886;
+  }
+}
