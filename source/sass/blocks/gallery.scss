@@ -63,3 +63,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: 1170px) {
+  .gallery__title {
+    font-size: 46px;
+  }
+}

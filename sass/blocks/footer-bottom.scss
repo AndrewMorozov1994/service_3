@@ -16,3 +16,12 @@
     width: 90%;
   }
 }
+
+@media (min-width: 1170px) {
+  .footer-bottom {
+    width: 1050px;
+    padding: 0 60px;
+    padding-bottom: 20px;
+    padding-top: 25px;
+  }
+}

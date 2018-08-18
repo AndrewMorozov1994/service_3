@@ -136,3 +136,38 @@
     padding-left: 15%;
   }
 }
+
+@media (min-width: 1170px) {
+  .user-menu {
+    width: 1170px;
+  }
+
+  .user-menu__item {
+    height: 290px;
+
+    &--01 {
+      background-image: url("../img/transfer_desktop.png");
+      background-position-x: 95%;
+    }
+
+    &--02 {
+      background-image: url("../img/pay_desktop.png");
+      background-position-x: 80%;
+    }
+
+    &--03 {
+      background-image: url("../img/enter_desktop.png");
+      background-position-x: 93%;
+    }
+
+    &--04 {
+      background-image: url("../img/mode_desktop.png");
+      background-position-x: 85%;
+    }
+  }
+
+  .user-menu__link {
+    padding-top: 100px;
+    padding-left: 50px;
+  }
+}

@@ -142,3 +142,46 @@
     margin-top: -105px;
   }
 }
+
+@media (min-width: 1170px) {
+  .promo-about {
+    background-color: transparent;
+    background-image: none;
+    padding: 0;
+    width: 1170px;
+    margin-top: -551px;
+    position: relative;
+  }
+
+  .promo-about__title {
+    font-size: 42px;
+    width: 520px;
+    line-height: 50px;
+    padding-left: 70px;
+  }
+
+  .promo-about__description {
+    font-size: 24px;
+    width: 430px;
+    padding-left: 70px;
+  }
+
+  .promo-about__question {
+    width: 1108px;
+  }
+
+  .promo-about__question-btn {
+    margin-left: 755px;
+    margin-top: -85px;
+  }
+
+  .promo-about__question-title {
+    margin-left: 50px;
+    padding-top: 30px;
+  }
+
+  .promo-about__question-description {
+    width: 490px;
+    margin-left: 50px;
+  }
+}

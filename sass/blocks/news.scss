@@ -166,3 +166,27 @@
     }
   }
 }
+
+@media (min-width: 1170px) {
+  .news {
+    width: 1170px;
+  }
+
+  .news__list-wrapper {
+    width: 100%;
+  }
+
+  .news__title {
+    font-size: 46px;
+  }
+
+  .news__img-wrapper {
+    &::after {
+      height: 98%;
+    }
+  }
+
+  .news__item-description {
+    width: 470px;
+  }
+}

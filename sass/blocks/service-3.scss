@@ -107,3 +107,25 @@
   }
 }
 
+@media (min-width: 1170px) {
+  .service-3 {
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  .service-3__title {
+    font-size: 46px;
+  }
+
+  .service-3__description {
+    width: 875px;
+  }
+
+  .service-3__list-wrapper {
+    width: 990px;
+  }
+
+  .service-3__img {
+    width: 230px;
+  }
+}
