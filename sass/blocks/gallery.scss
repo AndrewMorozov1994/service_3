@@ -26,3 +26,40 @@
   width: 320px;
   box-sizing: border-box;
 }
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .gallery__list-wrapper {
+    width: 100%;
+  }
+
+  .gallery__item {
+    min-width: 100%;
+  }
+
+  .gallery__list {
+    width: 100%;
+  }
+
+  .gallery__img {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery__title {
+    font-size: 32px;
+  }
+
+  .gallery__list-wrapper {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .gallery__list {
+    justify-content: center;
+  }
+
+  .gallery__img {
+    width: 100%;
+  }
+}

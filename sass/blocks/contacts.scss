@@ -57,3 +57,30 @@
     color: #6f7886;
   }
 }
+
+@media (min-width: 768px) {
+  .contacts {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #d7dee3;
+  }
+
+  .contacnts__list {
+    width: 688px;
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contacts__item-description {
+    width: 280px;
+    margin-left: 50px;
+  }
+
+  .contacts__item-title {
+    &::before {
+      margin-left: 0;
+    }
+  }
+}
+

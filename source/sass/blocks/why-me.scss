@@ -51,7 +51,7 @@
   }
 }
 
-.why-me__icon-02  {
+.why-me__icon-02 {
   &::before {
     background-image: url("../img/why_me_02.png");
   }
@@ -78,5 +78,68 @@
 .why-me__icon-06 {
   &::before {
     background-image: url("../img/why_me_06.png");
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .why-me__list {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .why-me__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .why-me {
+    margin-top: -10px;
+  }
+
+  .why-me__list {
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .why-me__item {
+    max-width: 215px;
+    height: 235px;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: flex-start;
+
+    span {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      margin-left: 0;
+      padding: 0 10px;
+
+      &::before {
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1169px) {
+  .why-me__item {
+    min-width: 30%;
   }
 }
