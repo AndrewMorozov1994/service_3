@@ -97,7 +97,9 @@
     }
   }
 
-  &--active {
+  &:hover {
+    background-color: #f7811d;
+
     .header-popup-item__img {
       background-color: #f7811d;
 
@@ -116,6 +118,14 @@
   }
 }
 
+.header-popup-item__link {
+  &:hover > .header-popup-item__description {
+    background-color: #f7811d;
+    color: white;
+    display: block;
+  }
+}
+
 .header-popup-item__description {
   margin: 0;
   width: 285px;
@@ -124,6 +134,7 @@
   left: -10px;
   padding-left: 35px;
   padding-top: 30px;
+  display: none;
 
   &:nth-child(2) {
     left: -110px;
@@ -144,13 +155,10 @@
     right: 25px;
   }
 
-  &--closed {
-    display: none;
-  }
-
   &--opened {
     background-color: #f7811d;
     color: white;
+    display: block;
   }
 }
 
@@ -576,6 +584,7 @@
 
   .header-popup-item__img {
     float: right;
+    pointer-events: none;
 
     &--01 {
       background-image: url("../img/header_popup_item_01_active.png");
