@@ -402,14 +402,21 @@ template {
   .header-popup-item__item .header-popup-item__img--03 {
     padding-right: 10px;
     margin-right: -10px; }
-  .header-popup-item__item--active .header-popup-item__img {
+  .header-popup-item__item:hover {
     background-color: #f7811d; }
-    .header-popup-item__item--active .header-popup-item__img--01 {
-      background-image: url("../img/header_popup_item_01_active.png"); }
-    .header-popup-item__item--active .header-popup-item__img--02 {
-      background-image: url("../img/header_popup_item_02_active.png"); }
-    .header-popup-item__item--active .header-popup-item__img--03 {
-      background-image: url("../img/header_popup_item_03_active.png"); }
+    .header-popup-item__item:hover .header-popup-item__img {
+      background-color: #f7811d; }
+      .header-popup-item__item:hover .header-popup-item__img--01 {
+        background-image: url("../img/header_popup_item_01_active.png"); }
+      .header-popup-item__item:hover .header-popup-item__img--02 {
+        background-image: url("../img/header_popup_item_02_active.png"); }
+      .header-popup-item__item:hover .header-popup-item__img--03 {
+        background-image: url("../img/header_popup_item_03_active.png"); }
+
+.header-popup-item__link:hover > .header-popup-item__description {
+  background-color: #f7811d;
+  color: white;
+  display: block; }
 
 .header-popup-item__description {
   margin: 0;
@@ -418,7 +425,8 @@ template {
   height: 60px;
   left: -10px;
   padding-left: 35px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  display: none; }
   .header-popup-item__description:nth-child(2) {
     left: -110px; }
   .header-popup-item__description:last-child {
@@ -432,11 +440,10 @@ template {
     background-image: url("../img/header_arrow-right.png");
     top: 35px;
     right: 25px; }
-  .header-popup-item__description--closed {
-    display: none; }
   .header-popup-item__description--opened {
     background-color: #f7811d;
-    color: white; }
+    color: white;
+    display: block; }
 
 .header-menu__link {
   padding: 13px 0;
