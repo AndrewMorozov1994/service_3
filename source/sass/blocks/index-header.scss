@@ -391,16 +391,11 @@
     margin-left: -40px;
     background-color: white;
     z-index: 100;
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding-bottom: 40px;
 
-
     &--closed {
-      display: none;
-    }
-
-    &--active {
       display: flex;
     }
   }
