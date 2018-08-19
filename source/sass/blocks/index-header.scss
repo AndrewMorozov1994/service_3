@@ -186,21 +186,18 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  width: 57px;
+  height: 27px;
+  right: 17px;
+  top: 22px;
+  background-image: url("../img/humburger.png");
 
   &--opened {
-    background-image: url("../img/humburger.png");
-    width: 57px;
-    height: 27px;
-    top: 33px;
-    right: 17px;
-  }
-
-  &--closed {
+    background-image: url("../img/closed_menu.png");
     width: 48px;
     height: 48px;
+    top: 33px;
     right: 17px;
-    top: 22px;
-    background-image: url("../img/closed_menu.png");
   }
 }
 
@@ -217,14 +214,6 @@
   top: 100px;
   display: none;
   z-index: 100;
-
-  &--active {
-    display: block;
-  }
-
-  &--closed {
-    display: none;
-  }
 
   &--opened {
     display: block;
@@ -318,12 +307,6 @@
       right: 0;
       left: 40px;
     }
-
-    &--closed {
-      right: 0;
-      left: 40px;
-      top: 12px;
-    }
   }
 
 
@@ -365,19 +348,13 @@
     padding-left: 40px;
     margin-left: -40px;
     height: 400px;
-    display: flex;
+    display: none;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
 
-
-
-    &--active {
+    &--opened {
       display: flex;
-    }
-
-    &--closed {
-      display: none;
     }
   }
 

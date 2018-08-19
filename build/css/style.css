@@ -461,19 +461,22 @@ template {
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 57px;
+  height: 27px;
+  right: 17px;
+  top: 22px;
+  background-image: url("../img/humburger.png"); }
   .header-menu__btn--opened {
-    background-image: url("../img/humburger.png");
-    width: 57px;
-    height: 27px;
-    top: 33px;
-    right: 17px; }
-  .header-menu__btn--closed {
+    background-image: url("../img/closed_menu.png");
     width: 48px;
     height: 48px;
-    right: 17px;
-    top: 22px;
-    background-image: url("../img/closed_menu.png"); }
+    top: 33px;
+    right: 17px; }
+
+.header-menu {
+  width: 320px;
+  margin-left: -10px; }
 
 .header-menu {
   width: 320px;
@@ -487,10 +490,6 @@ template {
   top: 100px;
   display: none;
   z-index: 100; }
-  .header-menu__list--active {
-    display: block; }
-  .header-menu__list--closed {
-    display: none; }
   .header-menu__list--opened {
     display: block; }
 
@@ -559,10 +558,6 @@ template {
     top: 20px;
     right: 0;
     left: 40px; }
-  .header-menu__btn--closed {
-    right: 0;
-    left: 40px;
-    top: 12px; }
   .header-phone__list {
     width: 290px;
     margin-left: auto;
@@ -588,9 +583,7 @@ template {
     padding-left: 40px;
     margin-left: -40px;
     height: 400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -599,12 +592,10 @@ template {
         flex-wrap: wrap;
     -ms-flex-line-pack: justify;
         align-content: space-between; }
-    .header-menu__list--active {
+    .header-menu__list--opened {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-    .header-menu__list--closed {
-      display: none; }
   .header-menu__enter {
     position: absolute;
     top: -110px;
