@@ -584,6 +584,7 @@
 
   .header-popup-item__img {
     float: right;
+    pointer-events: none;
 
     &--01 {
       background-image: url("../img/header_popup_item_01_active.png");

@@ -770,7 +770,8 @@ template {
     margin-top: -100px;
     position: relative; }
   .header-popup-item__img {
-    float: right; }
+    float: right;
+    pointer-events: none; }
     .header-popup-item__img--01 {
       background-image: url("../img/header_popup_item_01_active.png"); }
     .header-popup-item__img--02 {
