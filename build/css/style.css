@@ -478,10 +478,6 @@ template {
   width: 320px;
   margin-left: -10px; }
 
-.header-menu {
-  width: 320px;
-  margin-left: -10px; }
-
 .header-menu__list {
   position: absolute;
   background-color: white;
