@@ -16,6 +16,7 @@
   border: 1px solid #cfd7e4;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   &--next {
     border-left: none;
@@ -52,6 +53,16 @@
 
     &--gallery {
       order: 0;
+    }
+  }
+
+  .slider-arrow__btn {
+    &--next:hover {
+      background-image: url("../img/slider_arrow_next_hover.png");
+    }
+
+    &--back:hover {
+      background-image: url("../img/slider_arrow_back_hover.png");
     }
   }
 }

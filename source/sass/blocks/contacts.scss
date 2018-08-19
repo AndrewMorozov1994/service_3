@@ -76,6 +76,14 @@
     justify-content: space-between;
   }
 
+  .contacts__item {
+    &:nth-child(3) {
+      a {
+        border-bottom: 2px solid #6f7886;
+      }
+    }
+  }
+
   .contacts__item-description {
     width: 280px;
     margin-left: 50px;
@@ -110,24 +118,17 @@
     display: flex;
     align-items: center;
     margin-bottom: 28px;
-  }
-
-  .contacts__sub-link {
-    font-size: 18px;
-    font-weight: 300;
-    width: 130px;
-    padding-left: 16px;
-    display: flex;
-    align-items: center;
+    position: relative;
 
     &::before {
+      position: absolute;
       display: block;
       content: "";
       min-width: 44px;
       height: 44px;
       background-position: center;
       background-repeat: no-repeat;
-      margin-right: 30px;
+      left: 10px;
     }
 
     &--01 {
@@ -141,5 +142,20 @@
         background-image: url("../img/enter_icon_01.png");
       }
     }
+
+    &:hover {
+      border: 3px solid #f7811d;
+
+      span {
+        border-bottom: 1px dashed #000000;
+      }
+    }
+  }
+
+  .contacts__sub-link {
+    font-size: 18px;
+    font-weight: 300;
+    width: 130px;
+    padding-left: 86px;
   }
 }

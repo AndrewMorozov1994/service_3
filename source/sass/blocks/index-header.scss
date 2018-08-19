@@ -476,6 +476,11 @@
   .header-menu__btn {
     left: 0;
   }
+
+  .header-menu__list {
+    width: 100%;
+    align-content: space-around;
+  }
 }
 
 @media (min-width: 1170px) {

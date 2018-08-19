@@ -59,6 +59,25 @@
     justify-content: center;
   }
 
+  .gallery__item {
+    position: relative;
+
+    &:hover {
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 98.2%;
+        background-color: rgba(247, 129, 29, 0.9);
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../img/gallery_icon_hover.png");
+      }
+    }
+  }
+
   .gallery__img {
     width: 100%;
   }

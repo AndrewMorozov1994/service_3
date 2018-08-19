@@ -100,11 +100,30 @@
 
   .service-3__item {
     margin: 0;
+    position: relative;
+
+    &:hover {
+      &::before {
+        display: block;
+        content: "";
+        left: 4%;
+        width: 90%;
+        height: 88%;
+        top: 5%;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-image: url("../img/certificate_icon_hover.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
 
     &:first-child {
       margin: 0;
     }
   }
+
 }
 
 @media (min-width: 1170px) {
