@@ -31,7 +31,6 @@ gulp.task("serve", ["style"], function() {
 
 });
 gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-gulp.watch("source/*.html").on("change", server.reload);
 
   gulp.task(`scripts`, () => {
     return gulp.src('source/js/index.js')
@@ -64,7 +63,7 @@ gulp.task(`copy`, [`copy-html`, `scripts`, `style`], () => {
 
 
 gulp.task(`copy-html`, () => {
-  return gulp.src(`*.{html,ico}`).
+  return gulp.src(`source/*.{html,ico}`).
   pipe(gulp.dest(`build`)).
   pipe(server.stream());
 });

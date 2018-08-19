@@ -185,16 +185,13 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  background-image: url("../img/humburger.png");
+  width: 57px;
+  height: 27px;
+  top: 33px;
+  right: 17px;
 
   &--opened {
-    background-image: url("../img/humburger.png");
-    width: 57px;
-    height: 27px;
-    top: 33px;
-    right: 17px;
-  }
-
-  &--closed {
     width: 48px;
     height: 48px;
     right: 17px;
