@@ -487,10 +487,8 @@
     left: 40px;
   }
 
-
   .header-menu__list {
     align-content: space-around;
-
   }
 
   .header-menu-user__list {
@@ -570,15 +568,11 @@
 
   .header-menu__btn {
     z-index: 100;
+    left: 20px;
+    top: 60px;
 
     &--opened {
-      top: 60px;
-      left: 20px;
-    }
-
-    &--closed {
       top: 30px;
-      z-index: 100;
       left: 10px;
     }
   }
