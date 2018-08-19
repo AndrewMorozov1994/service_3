@@ -622,16 +622,12 @@ template {
     margin-left: -40px;
     background-color: white;
     z-index: 100;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-bottom: 40px; }
     .header-menu-user__list--closed {
-      display: none; }
-    .header-menu-user__list--active {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
