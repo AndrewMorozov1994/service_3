@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const server = require("browser-sync").create();
 const rollup = require(`gulp-better-rollup`);
 const sourcemaps = require(`gulp-sourcemaps`);
+const babel = require(`rollup-plugin-babel`);
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
@@ -36,7 +37,19 @@ gulp.watch("source/*.html").on("change", server.reload);
     return gulp.src('source/js/index.js')
       .pipe(plumber())
       .pipe(sourcemaps.init())
-      .pipe(rollup({}, `iife`))
+      .pipe(rollup({
+        plugins: [
+          babel({
+            presets: [
+              [
+                `es2015`,
+                {modules: false}
+              ],
+            ],
+            exclude: 'node_modules/**',
+          })
+        ]
+      }, `iife`))
       .pipe(sourcemaps.write(``))
       .pipe(gulp.dest(`build/js`));
   });
