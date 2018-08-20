@@ -176,3 +176,13 @@
     padding-bottom: 100px;
   }
 }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .user-menu {
+    width: 100%;
+  }
+
+  .user-menu__link {
+    padding-left: 15%;
+  }
+}

@@ -396,6 +396,14 @@ template {
 
 .header-popup-item__item {
   position: relative; }
+  .header-popup-item__item:nth-child(2) .header-popup-item__description {
+    left: -110px;
+    padding-top: 15px;
+    padding-right: 30px;
+    width: 255px;
+    padding-bottom: 15px; }
+  .header-popup-item__item:last-child .header-popup-item__description {
+    left: -210px; }
   .header-popup-item__item .header-popup-item__img--01 {
     padding-left: 10px;
     margin-left: -10px; }
@@ -427,10 +435,6 @@ template {
   padding-left: 35px;
   padding-top: 30px;
   display: none; }
-  .header-popup-item__description:nth-child(2) {
-    left: -110px; }
-  .header-popup-item__description:last-child {
-    left: -210px; }
   .header-popup-item__description::after {
     display: block;
     width: 27px;
@@ -569,13 +573,13 @@ template {
   .header-popup-item__list {
     width: 300px;
     margin-left: auto; }
+  .header-popup-item__item:first-child .header-popup-item__description {
+    left: -10px; }
+  .header-popup-item__item:nth-child(2) .header-popup-item__description {
+    width: 265px;
+    padding-right: 50px; }
   .header-popup-item__description {
     width: 315px; }
-    .header-popup-item__description:nth-child(2) {
-      left: -110px; }
-    .header-popup-item__description:last-child {
-      left: -210px;
-      width: 285px; }
   .header-menu {
     margin: 0;
     padding: 0;
@@ -768,7 +772,11 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: -100px;
-    position: relative; }
+    position: relative;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    z-index: 100; }
   .header-popup-item__img {
     float: right;
     pointer-events: none; }
@@ -785,12 +793,22 @@ template {
     .header-menu__btn--opened {
       top: 30px;
       left: 10px; }
-  .header-popup-item__item .header-popup-item__img--01 {
-    padding-left: 0;
-    margin-left: 0; }
-  .header-popup-item__item .header-popup-item__img--03 {
-    padding-right: 0;
-    margin-right: 0; }
+  .header-popup-item__item {
+    width: 100px; }
+    .header-popup-item__item:first-child .header-popup-item__description {
+      left: -255px; }
+    .header-popup-item__item:nth-child(2) .header-popup-item__description {
+      left: -255px;
+      width: 200px;
+      padding-right: 20px; }
+    .header-popup-item__item:last-child .header-popup-item__description {
+      left: -255px; }
+    .header-popup-item__item .header-popup-item__img--01 {
+      padding-left: 0;
+      margin-left: 0; }
+    .header-popup-item__item .header-popup-item__img--03 {
+      padding-right: 0;
+      margin-right: 0; }
   .header-menu {
     max-height: 520px;
     background-color: white;
@@ -803,7 +821,7 @@ template {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    z-index: 50; }
+    z-index: 120; }
   .header-menu__list {
     width: 580px;
     height: 420px;
@@ -857,7 +875,29 @@ template {
     width: 300px;
     padding-left: 10px; }
     .header-menu-user__link::before {
-      margin-right: 10px; } }
+      margin-right: 10px; }
+  .header-popup-item__description {
+    background-color: #f7811d;
+    top: 0;
+    width: 220px;
+    height: 70px;
+    color: white; }
+    .header-popup-item__description::after {
+      background-image: none; }
+  .header-popup-item__link {
+    height: 100px; }
+    .header-popup-item__link:hover > .header-popup-item__description {
+      background-color: #f7811d;
+      color: white;
+      display: block; } }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .index-header {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .header-menu {
+    width: 100%; } }
 
 .main-menu {
   display: none; }
@@ -1126,6 +1166,12 @@ template {
     padding-right: 55%;
     padding-bottom: 100px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .user-menu {
+    width: 100%; }
+  .user-menu__link {
+    padding-left: 15%; } }
+
 .news {
   width: 320px;
   margin: 0 auto;
@@ -1265,6 +1311,12 @@ template {
   .news__item-description {
     width: 470px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .news {
+    width: 100%; }
+  .news__item {
+    width: 100%; } }
+
 .slider-arrow {
   width: 162px;
   margin: 0 auto;
@@ -1383,6 +1435,11 @@ template {
   .our-houses__title {
     font-size: 46px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .our-houses {
+    width: 100%;
+    background-size: cover; } }
+
 .service-3 {
   background-color: #fff7f1; }
 
@@ -1491,6 +1548,10 @@ template {
   .service-3__img {
     width: 230px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .service-3 {
+    width: 100%; } }
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1563,6 +1624,12 @@ template {
   .gallery__title {
     font-size: 46px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .gallery {
+    width: 100%; }
+  .gallery__item {
+    width: 100%; } }
+
 .map {
   background-image: url("../img/map.jpg");
   background-position: center;
@@ -1570,7 +1637,8 @@ template {
   display: block;
   width: 100%;
   height: 450px;
-  content: ""; }
+  content: "";
+  background-size: cover; }
 
 .why-me {
   background-color: #fff7f1;
@@ -1735,6 +1803,10 @@ template {
       padding: 0; }
       .why-me__item span::before {
         margin-right: 35px; } }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .why-me {
+    width: 100%; } }
 
 .footer-menu__list {
   width: 300px;
@@ -1936,6 +2008,10 @@ template {
       padding-left: 13px;
       margin-right: 20px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .footer-menu {
+    width: 100%; } }
+
 .contacnts__list {
   width: 300px;
   padding: 0 10px;
@@ -2055,6 +2131,10 @@ template {
     width: 130px;
     padding-left: 86px; } }
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .contacts {
+    width: 100%; } }
+
 .footer-logo {
   width: 300px;
   padding: 0 10px;
@@ -2075,6 +2155,10 @@ template {
     padding: 0;
     text-align: left;
     width: 320px; } }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .footer-logo {
+    margin-left: 60px; } }
 
 .copyright {
   width: 300px;
@@ -2098,6 +2182,10 @@ template {
     margin: 0;
     text-align: left;
     width: 213px; } }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .copyright {
+    margin-right: 60px; } }
 
 @media (min-width: 768px) {
   .footer-bottom {
@@ -2126,3 +2214,10 @@ template {
     padding: 0 60px;
     padding-bottom: 20px;
     padding-top: 25px; } }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .footer-bottom {
+    width: 100%;
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 20px; } }
