@@ -1,0 +1,250 @@
+.main-modal {
+  width: 300px;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 40px;
+
+  input {
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid #f7811d;
+    margin-bottom: 30px;
+    color: #6b7078;
+  }
+
+  select {
+    margin-bottom: 30px;
+    border: none;
+    background-color: transparent;
+    font-weight: 300;
+    color: #6b7078;
+    border-bottom: 1px solid #f7811d;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    position: relative;
+  }
+
+  form {
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  textarea {
+    min-width: 98%;
+    font-weight: 300;
+    color: #6b7078;
+    border: 1px solid #f7811d;
+  }
+}
+
+.street-label {
+  position: relative;
+  pointer-events: none;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 14px;
+    height: 9px;
+    background-image: url("../../img/modal_select.png");
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
+}
+
+.house-label {
+  position: relative;
+  pointer-events: none;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 14px;
+    height: 9px;
+    background-image: url("../../img/modal_select.png");
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
+}
+
+.main-modal__title {
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.main-modal__btn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border: none;
+  background-image: url("../img/modal__btn.png");
+  background-color: transparent;
+  background-position: center;
+  top: 0;
+  right: 0;
+}
+
+.main-modal-form__btn {
+  border: none;
+  background-color: #f7811d;
+  color: white;
+  height: 80px;
+  width: 225px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.main-modal__description {
+  width: 280px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  &--small {
+    font-size: 18px;
+    color: #6b7078;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-modal {
+    width: 640px;
+    padding-bottom: 60px;
+
+    form {
+      width: 500px;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    input {
+      width: 230px;
+      margin-bottom: 40px;
+    }
+
+    select {
+      width: 230px;
+      margin-bottom: 40px;
+    }
+
+    &--reg {
+      .main-modal-form__btn {
+        width: 305px;
+      }
+
+      .main-modal__title {
+        padding-bottom: 40px;
+      }
+    }
+
+    &--question {
+      .main-modal__title {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  .main-modal__description {
+    width: 550px;
+  }
+
+  .main-modal__title {
+    font-size: 32px;
+    width: 300px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+
+  .main-modal-form__btn {
+    margin-top: 60px;
+  }
+
+  .street-label {
+    &::before {
+      right: 13px;
+    }
+  }
+
+  .house-label {
+    &::before {
+      right: 13px;
+    }
+  }
+}
+
+
+@media (min-width: 1170px) {
+  .main-modal {
+    width: 965px;
+    padding-bottom: 85px;
+
+    form {
+      width: 690px;
+    }
+
+    input {
+      width: 330px;
+      margin-bottom: 40px;
+    }
+
+    select {
+      width: 330px;
+      margin-bottom: 40px;
+    }
+
+    &--reg {
+      .main-modal-form__btn {
+        margin-top: 60px;
+      }
+    }
+
+    &--question {
+      .main-modal-form__btn {
+        margin-top: 40px;
+      }
+
+      .main-modal__description {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .main-modal__description {
+    width: 790px;
+
+    &--small {
+      margin-bottom: 60px;
+    }
+  }
+
+  #flat {
+    margin-right: 60px;
+  }
+
+  .main-modal__title {
+    font-size: 46px;
+    width: 400px;
+    padding-bottom: 85px;
+  }
+
+  .main-modal-form__btn {
+    margin-top: 105px;
+  }
+}
