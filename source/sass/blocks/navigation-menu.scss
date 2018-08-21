@@ -2,8 +2,9 @@
   margin-left: 20px;
 }
 
-.navigation-menu__link {
-
+.navigation-menu__list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-menu__item {
@@ -26,14 +27,12 @@
     }
   }
 
-  .navigation-menu__list {
-    display: flex;
-  }
+
 }
 
 @media (min-width: 1170px) {
   .navigation-menu {
-    margin-top: -120px;
+    margin-top: -170px;
     position: relative;
     margin-left: 65px;
   }

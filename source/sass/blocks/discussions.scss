@@ -1,0 +1,154 @@
+.discussions {
+  border-bottom: 1px solid #d7dee3;
+}
+
+.discussions__item {
+  margin-bottom: 30px;
+}
+
+.discussions__img {
+  height: 330px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--01 {
+    background-image: url("../img/discussions_01.jpg");
+  }
+
+  &--02 {
+    background-image: url("../img/discussions_02.jpg");
+  }
+
+  &--03 {
+    background-image: url("../img/discussions_03.jpg");
+  }
+}
+
+.discussions__btn {
+  display: flex;
+  width: 261px;
+  height: 64px;
+  border: 3px solid #f7811d;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding-left: 34px;
+  color: #6b7078;
+  margin: 0 auto;
+
+  &::after {
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    content: "";
+    background-image: url("../img/discussions_arrow.png");
+    top: 22px;
+    right: 20px;
+  }
+
+  &:hover {
+    background-color: #f7811d;
+    color: white;
+
+    &::after {
+      background-image: url("../img/discussions_arrow_hover.png");
+    }
+  }
+}
+
+.discussions__dis {
+  display: flex;
+  width: 267px;
+  height: 70px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding-left: 34px;
+  color: #6b7078;
+  margin: 0 auto;
+
+  &::before {
+    display: block;
+    width: 32px;
+    height: 24px;
+    content: "";
+    background-image: url("../img/discussions_icon.png");
+    margin-right: 12px;
+  }
+
+  &:hover {
+    span {
+      border-bottom: 1px dashed #6b7078;
+    }
+  }
+}
+
+.discussions__title {
+  font-size: 24px;
+  width: 90%;
+  margin-left: 20px;
+  display: block;
+  margin-top: 20px;
+
+  &:hover {
+    span {
+      color: #f7811d;
+      border-bottom: 1px solid #f7811d;
+    }
+  }
+}
+
+.discussions__description {
+  width: 90%;
+  margin-left: 20px;
+  display: block;
+  margin-top: 20px;
+  color: #6b7078;
+}
+
+@media (min-width: 768px) {
+  .discussions__item {
+    display: flex;
+  }
+
+  .discussions__img {
+    min-width: 330px;
+    width: 330px;
+    margin-left: 40px;
+  }
+
+  .discussions__btn {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .discussions__dis {
+    margin: 0;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .discussions__list {
+    margin-top: 150px;
+  }
+
+  .discussion__btn-wrapper {
+    display: flex;
+  }
+
+  .discussions__img {
+    margin-right: 65px;
+  }
+
+  .discussions__item {
+    margin-bottom: 80px;
+  }
+
+  .discussions__title {
+    font-size: 30px;
+  }
+}
