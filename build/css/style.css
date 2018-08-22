@@ -3143,7 +3143,8 @@ template {
   font-size: 24px;
   text-align: center;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  line-height: 40px; }
   .cabinet-owner span {
     color: #f7811d;
     font-size: 32px; }
@@ -3194,7 +3195,7 @@ template {
           align-items: center;
   margin: 0 auto;
   position: relative;
-  top: -942px;
+  top: -972px;
   cursor: pointer; }
   .cabinet-readings-label span {
     max-width: 220px; }
@@ -3263,7 +3264,7 @@ template {
 .cabinet__readings-description {
   margin-left: 20px;
   font-size: 22px;
-  padding-right: 10px; }
+  padding-right: 20px; }
   .cabinet__readings-description span {
     color: #f7811d; }
 
