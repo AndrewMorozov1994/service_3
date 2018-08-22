@@ -8,3 +8,10 @@
   content: "";
   background-size: cover;
 }
+
+@media (min-width: 1575px) {
+  .map {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

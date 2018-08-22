@@ -105,3 +105,10 @@
     justify-content: flex-start;
   }
 }
+
+@media (min-width: 1575px) {
+  .photo-gallery {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

@@ -75,3 +75,10 @@
     margin-left: 65px;
   }
 }
+
+@media (min-width: 1575px) {
+  .beautification {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

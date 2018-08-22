@@ -1668,6 +1668,11 @@ template {
   content: "";
   background-size: cover; }
 
+@media (min-width: 1575px) {
+  .map {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
 .why-me {
   background-color: #fff7f1;
   margin-top: 30px;
@@ -2592,6 +2597,11 @@ template {
         -ms-flex-pack: start;
             justify-content: flex-start; } }
 
+@media (min-width: 1575px) {
+  .photo-gallery {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
 .discussions__item {
   margin-bottom: 30px; }
 
@@ -2713,6 +2723,11 @@ template {
   .discussions__title {
     font-size: 30px; } }
 
+@media (min-width: 1575px) {
+  .discussions {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
 .beautification__dis {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2776,6 +2791,11 @@ template {
     margin-right: 40px; }
   .beautification__description {
     margin-left: 65px; } }
+
+@media (min-width: 1575px) {
+  .beautification {
+    max-width: 1170px;
+    margin: 0 auto; } }
 
 .comments-title {
   font-size: 30px;
@@ -3195,7 +3215,7 @@ template {
           align-items: center;
   margin: 0 auto;
   position: relative;
-  top: -994px;
+  top: -872px;
   cursor: pointer; }
   .cabinet-readings-label span {
     max-width: 220px; }
@@ -3464,3 +3484,8 @@ template {
       width: 390px; }
     .cabinet__pay input {
       width: 370px; } }
+
+@media (min-width: 1575px) {
+  .cabinet {
+    max-width: 1170px;
+    margin: 0 auto; } }

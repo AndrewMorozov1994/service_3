@@ -150,3 +150,10 @@
     font-size: 30px;
   }
 }
+
+@media (min-width: 1575px) {
+  .discussions {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

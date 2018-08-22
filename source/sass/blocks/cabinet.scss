@@ -65,7 +65,7 @@
   align-items: center;
   margin: 0 auto;
   position: relative;
-  top: -994px;
+  top: -872px;
   cursor: pointer;
 
 
@@ -442,3 +442,9 @@
   }
 }
 
+@media (min-width: 1575px) {
+  .cabinet {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
