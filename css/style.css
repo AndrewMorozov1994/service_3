@@ -1668,6 +1668,11 @@ template {
   content: "";
   background-size: cover; }
 
+@media (min-width: 1575px) {
+  .map {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
 .why-me {
   background-color: #fff7f1;
   margin-top: 30px;
@@ -2592,6 +2597,11 @@ template {
         -ms-flex-pack: start;
             justify-content: flex-start; } }
 
+@media (min-width: 1575px) {
+  .photo-gallery {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
 .discussions__item {
   margin-bottom: 30px; }
 
@@ -2713,6 +2723,11 @@ template {
   .discussions__title {
     font-size: 30px; } }
 
+@media (min-width: 1575px) {
+  .discussions {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
 .beautification__dis {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2776,6 +2791,11 @@ template {
     margin-right: 40px; }
   .beautification__description {
     margin-left: 65px; } }
+
+@media (min-width: 1575px) {
+  .beautification {
+    max-width: 1170px;
+    margin: 0 auto; } }
 
 .comments-title {
   font-size: 30px;
@@ -2889,7 +2909,7 @@ template {
   color: black; }
   .comments-author::before {
     display: block;
-    width: 27px;
+    min-width: 27px;
     height: 27px;
     content: "";
     background-image: url("../img/comments_author.png");
@@ -2897,6 +2917,31 @@ template {
 
 .comments__list {
   margin-top: 40px; }
+  .comments__list--faq .comments-title {
+    text-align: left;
+    color: black; }
+  .comments__list--faq .comments-author {
+    border-bottom: none; }
+  .comments__list--faq .comments__item:not(:last-child) {
+    border-bottom: 1px solid #d7dee3;
+    margin-bottom: 20px; }
+  .comments__list--faq .comments__sub-item {
+    margin-left: 0; }
+    .comments__list--faq .comments__sub-item .comments-wrapper {
+      margin-left: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 80px; }
+      .comments__list--faq .comments__sub-item .comments-wrapper::after {
+        left: 20px; }
+      .comments__list--faq .comments__sub-item .comments-wrapper::before {
+        right: 20px; }
+      .comments__list--faq .comments__sub-item .comments-wrapper .comments-time {
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 20px;
+        width: 200px; }
 
 .comments-text {
   margin-top: 50px; }
@@ -2961,6 +3006,25 @@ template {
     right: 0; }
   .comments__list {
     margin-top: 60px; }
+    .comments__list--faq .comments__sub-item {
+      margin-left: 40px; }
+      .comments__list--faq .comments__sub-item .comments-text {
+        margin: 0; }
+      .comments__list--faq .comments__sub-item .comments-wrapper {
+        margin-left: 0;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-bottom: 80px; }
+        .comments__list--faq .comments__sub-item .comments-wrapper::after {
+          top: 20px; }
+        .comments__list--faq .comments__sub-item .comments-wrapper::before {
+          bottom: 20px; }
+        .comments__list--faq .comments__sub-item .comments-wrapper .comments-time {
+          top: auto;
+          right: auto;
+          bottom: 20px;
+          left: 110px;
+          width: 400px; }
   .comments-wrapper {
     margin-left: 40px; }
   .comments-time {
@@ -3010,6 +3074,8 @@ template {
     top: 100px; }
   .comments__list {
     margin-top: 110px; }
+    .comments__list--faq .comments-title {
+      margin-left: 0; }
   .comments-wrapper {
     margin-left: 65px;
     margin-right: 65px;
@@ -3195,7 +3261,7 @@ template {
           align-items: center;
   margin: 0 auto;
   position: relative;
-  top: -994px;
+  top: -872px;
   cursor: pointer; }
   .cabinet-readings-label span {
     max-width: 220px; }
@@ -3464,3 +3530,209 @@ template {
       width: 390px; }
     .cabinet__pay input {
       width: 370px; } }
+
+@media (min-width: 1575px) {
+  .cabinet {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
+.page-news-paginator {
+  display: none; }
+
+.page-news__date {
+  color: #6b7078;
+  margin-left: 20px; }
+
+.page-news__img {
+  width: 100%;
+  height: 325px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .page-news__img--01 {
+    background-image: url("../img/news_img_01.jpg"); }
+  .page-news__img--02 {
+    background-image: url("../img/news_img_02.jpg"); }
+
+.page-news__item {
+  margin-bottom: 40px; }
+
+.page-news__title {
+  font-size: 24px;
+  margin-left: 20px;
+  display: block;
+  width: 91%; }
+  .page-news__title:hover span {
+    border-bottom: 1px solid #f7811d;
+    color: #f7811d; }
+
+.page-news__description {
+  color: #6b7078;
+  margin-left: 20px;
+  width: 91%; }
+
+.page-news__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 260px;
+  height: 75px;
+  border: 3px solid #f7811d;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-left: 20px; }
+  .page-news__btn span {
+    margin-left: 35px;
+    color: #6b7078; }
+  .page-news__btn::after {
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    content: "";
+    background-image: url("../img/discussions_arrow.png");
+    top: 27px;
+    right: 20px; }
+  .page-news__btn:hover {
+    background-color: #f7811d; }
+    .page-news__btn:hover::after {
+      background-image: url("../img/discussions_arrow_hover.png"); }
+    .page-news__btn:hover span {
+      color: white; }
+
+@media (min-width: 768px) {
+  .page-news-paginator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 24px;
+    color: #6b7078;
+    margin-bottom: 50px;
+    margin-left: 40px; }
+  .page-news-paginator__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 3px solid #e3e8ec;
+    width: 89px;
+    height: 89px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 14px; }
+    .page-news-paginator__item:hover {
+      border: 3px solid #f7811d; }
+    .page-news-paginator__item--active {
+      background-color: #f7811d;
+      border: 3px solid #f7811d; }
+      .page-news-paginator__item--active a {
+        color: white; }
+    .page-news-paginator__item--next {
+      width: 195px; }
+  .page-news-paginator__link {
+    color: #737b81;
+    padding: 18px 30px; }
+  .page-news__img {
+    min-width: 325px;
+    width: 325px;
+    margin-right: 20px; }
+  .page-news__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 40px; } }
+
+@media (min-width: 1170px) {
+  .page-news-paginator {
+    margin-left: 65px; }
+  .page-news__list {
+    margin-top: 150px; }
+  .page-news__item {
+    margin-left: 65px;
+    margin-bottom: 55px; }
+  .page-news__title {
+    font-size: 30px; }
+  .page-news__btn {
+    margin-top: 35px; } }
+
+@media (min-width: 1575px) {
+  .page-news {
+    max-width: 1170px;
+    margin: 0 auto; }
+  .page-news-paginator__item--next {
+    width: 268px; } }
+
+.reviews__date {
+  color: #6b7078; }
+
+.reviews__link {
+  font-size: 24px;
+  display: block;
+  width: 220px; }
+  .reviews__link:hover span {
+    color: #f7811d;
+    border-bottom: 1px solid #f7811d; }
+
+.reviews__img {
+  display: block;
+  content: "";
+  width: 230px;
+  height: 325px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  position: relative; }
+  .reviews__img img {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 13px; }
+  .reviews__img:hover::before {
+    display: block;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url(../img/certificate_icon_hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    cursor: pointer; }
+
+.reviews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px; }
+
+.reviews__item {
+  margin: 0 20px;
+  margin-bottom: 50px; }
+
+@media (min-width: 1170px) {
+  .reviews__list {
+    margin-top: 150px; }
+  .reviews__item {
+    width: 20%;
+    margin-bottom: 80px; } }
+
+@media (min-width: 1575px) {
+  .reviews {
+    max-width: 1170px;
+    margin: 0 auto; } }
+
+@media (min-width: 1575px) {
+  .faq {
+    max-width: 1170px;
+    margin: 0 auto; } }

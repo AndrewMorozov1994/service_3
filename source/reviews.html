@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <title>Сервис-3: Личный кабинет</title>
+    <title>Сервис-3: Обсуждение</title>
 </head>
 <body>
     <header class="index-header index-header--gallery">
@@ -62,7 +62,7 @@
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Стандарты раскрытия информации</a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Полезная информация</a></li>
                 <li class="header-menu__item"><a href="photo-gallery.html" class="header-menu__link">Фото-галерея</a></li>
-                <li class="header-menu__item"><a href="reviews.html" class="header-menu__link">Отзывы и предложения</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Отзывы и предложения</a></li>
                 <li class="header-menu__item"><a href="discussions.html" class="header-menu__link">Обсуждения</a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Контакты</a></li>
             </ul>
@@ -81,123 +81,97 @@
         </div>
     </header>
     <main>
-      <div class="cabinet">
+      <div class="reviews">
       <div class="navigation-menu">
         <ul class="navigation-menu__list list-style-none">
           <li class="navigation-menu__item"><a href="index.html" class="navigation-menu__link navigation-menu__link--active"><span>Главная</span></a></li>
-          <li class="navigation-menu__item"><a class="navigation-menu__link"><span>Личный кабинет</span></a></li>
+          <li class="navigation-menu__item"><a class="navigation-menu__link"><span>Отзывы и предложения</span></a></li>
         </ul>
       </div>
-      <h1 class="page-title">Личный кабинет</h1>
-      <p class="cabinet-owner">Уважаемый собственник, Ваша задолженность за ЖКУ <span class="cabinet-owner-color">1 053.21</span>р.</p>
-      <p class="cabinet-debt">Ваш долг: <span>700.57</span>р.</p>
-      <p class="cabinet-fine">Пени: <span>327.56</span>р.</p>
-      <p class="cabinet-request">Просим вас произвести оплату</p>
-      <ul class="cabinet__list list-style-none">
-        <li class="cabinet__item" id="cabinet-pay-anchor">
-          <input class="cabinet-pay-input" type="radio" name="cabinet-radio" id="cabinet-pay" checked>
-          <label class="cabinet-pay-label" for="cabinet-pay">Оплата услуг ЖКХ</label>
-          <div class="cabinet__pay">
-            <form action="#">
-              <div class="cabinet__pay-email">
-                <p class="email-name">E-mail для отправки чека</p>
-                <input type="email" id="cabinet-email" value="alex82@mail.ru">
-                <label for="cabinet-email"></label>
-              </div>
-              <div class="cabinet__personal">
-                <p class="personal-name">Лицевой счет</p>
-                <input type="text" id="cabinet-personal" value="1362236790">
-                <label for="cabinet-personal"></label>
-              </div>
-              <div class="cabinet__sum-pay">
-                <p class="your__debt">Ваш долг за ЖКУ <span>700.57</span> р.</p>
-                <p class="sum-pay-name">Сумма долга к оплате</p>
-                <input type="text" id="sum-pay">
-                <label for="sum-pay"></label>
-                <button class="cabinet__pay-btn" type="submit">Оплатить долг</button>
-              </div>
-
-              <div class="cabinet__fine-pay">
-                <p class="your__fine">Ваша пеня <span>327.56</span> р.</p>
-                <p class="fine-pay-name">Сумма пени к оплате</p>
-                <input type="text" id="fine-pay">
-                <label for="fine-pay"></label>
-                <button class="cabinet__pay-btn" type="submit">Оплатить пени</button>
-              </div>
-
-            </form>
-          </div>
+      <h1 class="page-title">Отзывы и предложения</h1>
+      <ul class="reviews__list list-style-none">
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_01.jpg" alt="reviews_01"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
         </li>
-        <li class="cabinet__item" >
-          <input class="cabinet-readings-input" type="radio" name="cabinet-radio" id="cabinet-readings">
-          <label class="cabinet-readings-label" id="cabinet-readings-anchor" for="cabinet-readings"><span>Передать показания приборов учета</span></label>
-          <div class="cabinet__readings">
-              <p class="cabinet__readings-description">На этой странице Вы можете вносить и корректировать показания индивидуальных
-                  (коллективных) приборов учета на текущую дату в период с <span>12 по 20 числа </span>текущего месяца </p>
-              <form action="#">
-                <div class="control-wrapper">
-                  <div class="street">
-                    <p class="street-name">Улица</p>
-                    <select id="street-select">
-                      <option value="Бажова" selected>Бажова</option>
-                    </select>
-                    <label for="street-select"></label>
-                  </div>
-                  <div class="house">
-                    <p class="house-number">Дом</p>
-                    <select id="house-select">
-                      <option value="2 В" selected>2 В</option>
-                    </select>
-                    <label for="house-select"></label>
-                  </div>
-                  <div class="flat">
-                    <p class="flat-name">Квартира</p>
-                    <select id="flat-select">
-                      <option value="6" selected>6</option>
-                    </select>
-                    <label for="flat-select"></label>
-                  </div>
-                </div>
-                <div class="table-wrapper">
-                  <div class="table-number"><p>Показания ИПУ по адресу: Бажова 2 В, 6, № счета: 00000800203000060001</p></div>
-                  <div class="table-main-wrapper">
-                    <ul class="table-row-1 list-style-none">
-                      <li class="table-col-1"><span>Прибор учета</span></li>
-                      <li class="table-col-1"><span>Ед. изм.</span></li>
-                      <li class="table-col-1"><span>Предыдущие показания (дата)</span></li>
-                      <li class="table-col-1"><span>Шкала</span></li>
-                      <li class="table-col-1"><span>Предыдущее значение</span></li>
-                      <li class="table-col-1"><span>Новое значение</span></li>
-                      <li class="table-col-1"><span>Расход</span></li>
-                      <li class="table-col-1"><span>Текущие показания (результат)</span></li>
-                    </ul>
-                    <ul class="table-row-1 list-style-none">
-                      <li class="table-col-1 table-col-1--2"><span>Счетчик горячей воды № 18549859</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>куб.м.</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>24.07.2018</span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span>238.677</span></li>
-                      <li class="table-col-1 table-col-1--2"><span><input class="table-input" type="text" id="hot"></span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                    </ul>
-                    <ul class="table-row-1 list-style-none">
-                      <li class="table-col-1 table-col-1--2"><span>Счетчик холодной воды № 18549859</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>куб.м.</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>24.07.2018</span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span>238.677</span></li>
-                      <li class="table-col-1 table-col-1--2"><span><input class="table-input"type="text" id="colt"></span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                    </ul>
-                  </div>
-                </div>
-                <button class="cabinet__btn" type="submit">Отправить</button>
-              </form>
-            </div>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_02.jpg" alt="reviews_02"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_03.jpg" alt="reviews_03"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_04.jpg" alt="reviews_04"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_01.jpg" alt="reviews_01"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_02.jpg" alt="reviews_02"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_03.jpg" alt="reviews_03"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_04.jpg" alt="reviews_04"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_01.jpg" alt="reviews_01"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_02.jpg" alt="reviews_02"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_03.jpg" alt="reviews_03"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_04.jpg" alt="reviews_04"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_01.jpg" alt="reviews_01"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_02.jpg" alt="reviews_02"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарность</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_03.jpg" alt="reviews_03"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__img"><img src="img/reviews_04.jpg" alt="reviews_04"></div>
+          <p class="reviews__date">18.02.2016</p>
+          <a href="#" class="reviews__link"><span>Благодарственное письмо</span></a>
         </li>
       </ul>
+
       </div>
     </main>
 
@@ -213,7 +187,7 @@
                 <li class="footer-menu__item"><a href="#" class="footer-menu__link">Стандарты раскрытия информации</a></li>
                 <li class="footer-menu__item"><a href="#" class="footer-menu__link">Полезная информация</a></li>
                 <li class="footer-menu__item"><a href="photo-gallery.html" class="footer-menu__link">Фото-галерея</a></li>
-                <li class="footer-menu__item"><a href="reviews.html" class="footer-menu__link">Отзывы и предложения</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Отзывы и предложения</a></li>
                 <li class="footer-menu__item"><a href="discussions.html" class="footer-menu__link">Обсуждения</a></li>
                 <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
             </ul>
