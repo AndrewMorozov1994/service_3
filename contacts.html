@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Сервис-3: Контакты</title>
+</head>
+<body>
+<div class="body__wrapper">
+    <header class="index-header index-header--gallery">
+        <div class="header-logo">
+            <a href="index.html"><img class="header-logo__img" src="img/logo.png" alt="logo"></a>
+            <p class="header-logo__description">Управляющая компания</p>
+        </div>
+        <ul class="header-phone__list list-style-none">
+          <button class="header-phone__list-btn" type="button"><span class="visually-hidden">Открыть</span></button>
+            <li class="header-phone__item">
+                <p class="header-phone__title">Заявки по электрике:</p>
+                <a href="tel:93-57-95" class="header-phone__link">93-57-95</a>
+            </li>
+            <li class="header-phone__item ">
+                <p class="header-phone__title">Заявки по сантехнике:</p>
+                <a href="tel:93-57-93" class="header-phone__link">93-57-93</a>
+            </li>
+            <li class="header-phone__item ">
+                <p class="header-phone__title">Содержание жил фонда:</p>
+                <a href="tel:93-57-94" class="header-phone__link">93-57-94</a>
+            </li>
+        </ul>
+        <ul class="header-popup-item__list list-style-none">
+            <li class="header-popup-item__item">
+                <div class="header-popup-item__link ">
+                    <div class="header-popup-item__img  header-popup-item__img--01"></div>
+                    <a href="" class="header-popup-item__description">Оплата услуг ЖКХ</a>
+                </div>
+            </li>
+            <li class="header-popup-item__item ">
+                <div class="header-popup-item__link">
+                    <div class="header-popup-item__img header-popup-item__img--02"></div>
+                    <a href="" class="header-popup-item__description">Передать показания приборов учета</a>
+                </div>
+            </li>
+            <li class="header-popup-item__item">
+                <div class="header-popup-item__link">
+                    <div class="header-popup-item__img header-popup-item__img--03"></div>
+                    <a href="" class="header-popup-item__description">Режим работы</a>
+                </div>
+            </li>
+        </ul>
+        <nav class="header-menu">
+            <button class="header-menu__btn" type="button"><span class="visually-hidden">Открыть</span></button>
+            <ul class="header-menu__list list-style-none">
+                <li class="header-menu__item"><a href="#" class="header-menu__enter"><span>Вход</span></a></li>
+                <li class="header-menu__item"><a href="index.html" class="header-menu__link">Главная</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
+                <li class="header-menu__item"><a href="news.html" class="header-menu__link">Новости</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Вакансии</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Задолженность <br>за ЖКУ</a></li>
+                <li class="header-menu__item"><a href="faq.html" class="header-menu__link">Вопрос/ответ</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Стандарты раскрытия информации</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Полезная информация</a></li>
+                <li class="header-menu__item"><a href="photo-gallery.html" class="header-menu__link">Фото-галерея</a></li>
+                <li class="header-menu__item"><a href="reviews.html" class="header-menu__link">Отзывы и предложения</a></li>
+                <li class="header-menu__item"><a href="discussions.html" class="header-menu__link">Обсуждения</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Контакты</a></li>
+            </ul>
+            <ul class="header-menu-user__list list-style-none">
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--01" href="#">Оплата услуг ЖКХ</a></li>
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--02" href="#">Передать показания приборов учета</a></li>
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--03" href="#">Режим работы</a></li>
+          </ul>
+        </nav>
+        <div class="header-search-wrapper">
+          <form action="#">
+            <label for="header-search"></label>
+            <input type="search" id="header-search">
+            <button class="visually-hidden" type="submit">Отправить</button>
+          </form>
+        </div>
+    </header>
+    <main class="main__wrapper">
+      <div class="page-contacts">
+      <div class="navigation-menu">
+        <ul class="navigation-menu__list list-style-none">
+          <li class="navigation-menu__item"><a href="index.html" class="navigation-menu__link navigation-menu__link--active"><span>Главная</span></a></li>
+          <li class="navigation-menu__item"><a class="navigation-menu__link"><span>Контакты</span></a></li>
+        </ul>
+      </div>
+      <h1 class="page-title">Контакты</h1>
+      <a href="#" class="page-contacts-req"><span>Банковские и почтовые реквизиты</span></a>
+      <ul class="page-contacts__list list-style-none">
+        <li class="page-contacts__item">
+          <h4 class="page-contacts__item-title">Главный офис</h4>
+          <div class="page-contacts__item-wrapper">
+            <p class="page-contacts__adress">628400, Тюменская область, г. Сургут, ул. Островского, 14/2</p>
+            <p class="page-contacts__phone">Телефон/факс: <a href="tel:+7(3462)23-53-53">+7 (3462) 23-53-53</a></p>
+            <p class="page-contacts__email">e-mail: <a href="mailto:secretary@servis3.ru ">secretary@servis3.ru </a></p>
+          </div>
+        </li>
+        <li class="page-contacts__item">
+          <h4 class="page-contacts__item-title">Аварийно-диспетчерская служба</h4>
+          <div class="page-contacts__item-wrapper">
+            <p class="page-contacts__phone">Телефон/факс: <a href="tel:+7(3462)23-53-53">+7 (3462) 23-53-53,</a> <a href="tel:+7(3462)93-57-93">93-57-93,</a> <a href="tel:+7(3462)93-57-94">93-57-93</a> (круглосуточно) </p>
+          </div>
+        </li>
+        <li class="page-contacts__item">
+          <h4 class="page-contacts__item-title">Паспортный стол</h4>
+          <div class="page-contacts__passport-wrapper">
+            <div class="page-contacts__item-wrapper">
+              <p class="page-contacts__passport">ул. Рабочая, 31а</p>
+              <p class="page-contacts__adress">628400, Тюменская область, г. Сургут, ул. Рабочая, 31а</p>
+              <p class="page-contacts__phone">Телефон/факс: <a href="tel:+7(3462)24-71-65">+7 (3462) 24-71-65</a></p>
+            </div>
+            <div class="page-contacts__item-wrapper">
+              <p class="page-contacts__passport">Бульвар Свободы, 12</p>
+              <p class="page-contacts__adress">628400, Тюменская область, г. Сургут, б. Свободы, 12</p>
+              <p class="page-contacts__phone">Телефон/факс: <a href="tel:+7(3462)50-33-13">+7 (3462) 50-33-13</a></p>
+            </div>
+            <div class="page-contacts__item-wrapper">
+              <p class="page-contacts__passport">ул. Студенческая, 14</p>
+              <p class="page-contacts__adress">628400, Тюменская область, г. Сургут, ул. Студенческая, 14</p>
+              <p class="page-contacts__phone">Телефон/факс: <a href="tel:+7(3462)50-28-20">+7 (3462) 50-28-20</a></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="page-contacts__sub-list list-style-none">
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-01">Адмитистрация</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)23-53-53">+7 (3462) 23-53-53</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-01">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-01"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-02">Абонентский отдел</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)31-96-14">+7 (3462) 31-96-14</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-02">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-02"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--02">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-03">Бухгалтерия</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)22-34-76">+7 (3462) 22-34-76</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-03">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-03"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--03">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-04">Жилищный отдел</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)31-96-38">+7 (3462) 31-96-38</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-04">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-04"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--04">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-05">Отдел эксплуатации</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-05">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-05"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--05">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-06">Юридический отдел</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)31-82-11">+7 (3462) 31-82-11</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-06">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-06"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--06">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-07">Договорный отдел</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)51-56-67">+7 (3462) 51-56-67</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-07">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-07"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--07">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-08">Производственный отдел</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)50-29-21">+7 (3462) 50-29-21</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-08">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-08"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--08">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="page-contacts__sub-item">
+          <label class="page-contacts-radio-title" for="page-contacts-radio-09">Планово-экономический отдел</label>
+          <p class="page-contacts__sub-phone"><a href="tel:+7(3462)22-34-76">+7 (3462) 22-34-76</a></p>
+          <input class="page-contacts-radio-input" type="radio"  name="page-contacts-radio" id="page-contacts-radio-09">
+          <label class="page-contacts-radio-turn" for="page-contacts-radio-09"><span class="turn">Развернуть все</span><span class="turn-down">Свернуть все</span> </label>
+          <div class="page-contacts__sub-wrapper page-contacts__sub-wrapper--09">
+            <ul class="page-contacts__sub-wrapper-list list-style-none">
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Биба Андрей Александрович</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Карась Оксана Сергеевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title">Инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Шевцова Татьяна Евгеньевна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Николаева Наталья Михайловна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+              <li class="page-contacts__sub-wrapper-item">
+                <div class="page-contacts__sub-wrapper-item-wrapper-01">
+                  <p class="page-contacts__sub-wrapper-title page-contacts__sub-wrapper-title--ing">Ведущий инженер</p>
+                  <span class="line"></span>
+                </div>
+                <div class="page-contacts__sub-wrapper-item-wrapper-02">
+                  <p class="name">Распопова Светлана Владимировна</p>
+                  <p class="phone"><a href="tel:+7(3462)31-96-25">+7 (3462) 31-96-25</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="page-contacts-pull">
+        <h4 class="page-contacts__item-title">Прием показаний индивидуальных приборов учета</h4>
+        <a href="tel:+7(3462)31-96-14">+7 (3462) 31-96-14</a>
+      </div>
+
+      </div>
+    </main>
+
+    <footer>
+        <nav class="footer-menu">
+            <ul class="footer-menu__list list-style-none">
+                <li class="footer-menu__item"><a href="index.html" class="footer-menu__link">Главная</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">О компании</a></li>
+                <li class="footer-menu__item"><a href="news.html" class="footer-menu__link">Новости</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Вакансии</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Задолженность <br>за ЖКУ</a></li>
+                <li class="footer-menu__item"><a href="faq.html" class="footer-menu__link">Вопрос/ответ</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Стандарты раскрытия информации</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Полезная информация</a></li>
+                <li class="footer-menu__item"><a href="photo-gallery.html" class="footer-menu__link">Фото-галерея</a></li>
+                <li class="footer-menu__item"><a href="reviews.html" class="footer-menu__link">Отзывы и предложения</a></li>
+                <li class="footer-menu__item"><a href="discussions.html" class="footer-menu__link">Обсуждения</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
+            </ul>
+            <ul class="footer-menu-user__list list-style-none">
+                <li class="footer-menu-user__item"><a class="footer-menu-user__link footer-menu-user__link--01" href="#">Оплата услуг ЖКХ</a></li>
+                <li class="footer-menu-user__item"><a class="footer-menu-user__link footer-menu-user__link--02" href="#">Передать показания приборов учета</a></li>
+                <li class="footer-menu-user__item"><a class="footer-menu-user__link footer-menu-user__link--03" href="#">Режим работы</a></li>
+            </ul>
+        </nav>
+        <section class="contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+            <ul class="contacts__sub-list list-style-none">
+              <li class="contacts__sub-item contacts__sub-item--01"><a href="#" class="contacts__sub-link"><span>Версия для слабовидящих</span></a></li>
+              <li class="contacts__sub-item contacts__sub-item--02"><a href="#" class="contacts__sub-link"><span>Вход</span></a></li>
+            </ul>
+            <ul class="contacnts__list list-style-none">
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--01">Адрес:</p>
+                    <p class="contacts__item-description">г.Сургут, ул. Островского, 14/2</p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--02">Телефон:</p>
+                    <p class="contacts__item-description"><a href="tel:8(3462)23-53-53">(3462) 23-53-53</a></p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--03">Эл. почта:</p>
+                    <p class="contacts__item-description"><a href="mailto:secretary@servis3.ru">secretary@servis3.ru</a></p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--04">Факс:</p>
+                    <p class="contacts__item-description"><a href="tel:8(3462)23-53-53">(3462) 23-53-53</a></p>
+                </li>
+            </ul>
+        </section>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <a href="index.html"><img src="img/logo_footer.png" alt="logo" class="footer-logo__img"></a>
+                <p class="footer-logo__description">2001-2018. Все права защищены.</p>
+                <p class="footer-logo__description">ООО Управляющая компания «Сервис-3»</p>
+            </div>
+            <div class="copyright">
+                <a href="http://uralsite.ru/"><img src="img/logo_studio.png" alt="Студия" class="copyright__img"></a>
+                <span class="copyright__description">Создание сайта</span>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="js/index.js"></script>
+</body>
+</html>
