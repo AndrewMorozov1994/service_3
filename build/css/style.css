@@ -2337,7 +2337,10 @@ template {
   background-color: white;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  display: none; }
+  .main-modal--opened {
+    display: block; }
   .main-modal input {
     font-size: 20px;
     font-weight: 300;

@@ -33,7 +33,7 @@ gulp.task("serve", ["style"], function() {
 gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
 
   gulp.task(`scripts`, () => {
-    return gulp.src('source/js/index.js')
+    return gulp.src('source/js/*.js')
       .pipe(plumber())
       .pipe(sourcemaps.init())
       .pipe(rollup({
