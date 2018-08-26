@@ -4,6 +4,11 @@
   margin: 0 auto;
   position: relative;
   padding-bottom: 40px;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
 
   input {
     font-size: 20px;
