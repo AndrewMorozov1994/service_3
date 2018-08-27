@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Сервис-3: Обсуждение</title>
+</head>
+<body>
+<div class="body__wrapper">
+    <header class="index-header index-header--gallery">
+        <div class="header-logo">
+            <a href="index.html"><img class="header-logo__img" src="img/logo.png" alt="logo"></a>
+            <p class="header-logo__description">Управляющая компания</p>
+        </div>
+        <ul class="header-phone__list list-style-none">
+          <button class="header-phone__list-btn" type="button"><span class="visually-hidden">Открыть</span></button>
+            <li class="header-phone__item">
+                <p class="header-phone__title">Заявки по электрике:</p>
+                <a href="tel:93-57-95" class="header-phone__link">93-57-95</a>
+            </li>
+            <li class="header-phone__item ">
+                <p class="header-phone__title">Заявки по сантехнике:</p>
+                <a href="tel:93-57-93" class="header-phone__link">93-57-93</a>
+            </li>
+            <li class="header-phone__item ">
+                <p class="header-phone__title">Содержание жил фонда:</p>
+                <a href="tel:93-57-94" class="header-phone__link">93-57-94</a>
+            </li>
+        </ul>
+        <ul class="header-popup-item__list list-style-none">
+            <li class="header-popup-item__item">
+                <div class="header-popup-item__link ">
+                    <div class="header-popup-item__img  header-popup-item__img--01"></div>
+                    <a href="" class="header-popup-item__description">Оплата услуг ЖКХ</a>
+                </div>
+            </li>
+            <li class="header-popup-item__item ">
+                <div class="header-popup-item__link">
+                    <div class="header-popup-item__img header-popup-item__img--02"></div>
+                    <a href="" class="header-popup-item__description">Передать показания приборов учета</a>
+                </div>
+            </li>
+            <li class="header-popup-item__item">
+                <div class="header-popup-item__link">
+                    <div class="header-popup-item__img header-popup-item__img--03"></div>
+                    <a href="" class="header-popup-item__description">Режим работы</a>
+                </div>
+            </li>
+        </ul>
+        <nav class="header-menu">
+            <button class="header-menu__btn" type="button"><span class="visually-hidden">Открыть</span></button>
+            <ul class="header-menu__list list-style-none">
+                <li class="header-menu__item"><a href="#" class="header-menu__enter popup-enter"><span>Вход</span></a></li>
+                <li class="header-menu__item"><a href="index.html" class="header-menu__link">Главная</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
+                <li class="header-menu__item"><a href="news.html" class="header-menu__link">Новости</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Вакансии</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Задолженность <br>за ЖКУ</a></li>
+                <li class="header-menu__item"><a href="faq.html" class="header-menu__link">Вопрос/ответ</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Стандарты раскрытия информации</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Полезная информация</a></li>
+                <li class="header-menu__item"><a href="photo-gallery.html" class="header-menu__link">Фото-галерея</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Отзывы и предложения</a></li>
+                <li class="header-menu__item"><a href="discussions.html" class="header-menu__link">Обсуждения</a></li>
+                <li class="header-menu__item"><a href="contacts.html" class="header-menu__link">Контакты</a></li>
+            </ul>
+            <ul class="header-menu-user__list list-style-none">
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--01" href="#">Оплата услуг ЖКХ</a></li>
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--02" href="#">Передать показания приборов учета</a></li>
+              <li class="header-menu-user__item"><a class="header-menu-user__link header-menu-user__link--03" href="#">Режим работы</a></li>
+          </ul>
+        </nav>
+        <div class="header-search-wrapper">
+          <form action="#">
+            <label for="header-search"></label>
+            <input type="search" id="header-search">
+            <button class="visually-hidden" type="submit">Отправить</button>
+          </form>
+        </div>
+    </header>
+    <main class="main__wrapper">
+      <nav class="main-menu">
+        <button class="header-menu__btn" type="button"><span class="visually-hidden">Открыть</span></button>
+        <div class="header-logo">
+          <a href="index.html"><img class="header-logo__img" src="img/logo.png" alt="logo"></a>
+          <p class="header-logo__description">Управляющая компания</p>
+        </div>
+        <input type="search" id="main-menu__search">
+        <label for="main-menu__search"></label>
+        <ul class="main-menu__list list-style-none">
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Главная</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+          <li class="main-menu__item"><a href="news.html" class="main-menu__link">Новости</a></li>
+          <li class="main-menu__item"><a href="photo-gallery.html" class="main-menu__link">Фото-галерея</a></li>
+          <li class="main-menu__item"><a href="faq.html" class="main-menu__link">Вопрос/ответ</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Режим работы</a></li>
+          <li class="main-menu__item"><a href="contacts.html" class="main-menu__link">Контакты</a></li>
+        </ul>
+        <a href="#" class="main-menu__impaired">Версия для соабовидящих</a>
+        <a href="#" class="main-menu__enter popup-enter">Вход</a>
+      </nav>
+      <div class="text">
+      <div class="navigation-menu">
+        <ul class="navigation-menu__list list-style-none">
+          <li class="navigation-menu__item"><a href="index.html" class="navigation-menu__link navigation-menu__link--active"><span>Главная</span></a></li>
+          <li class="navigation-menu__item"><a class="navigation-menu__link"><span>Текстовый шаблон</span></a></li>
+        </ul>
+      </div>
+      <h1 class="page-title">Текстовый шаблон</h1>
+      <div class="text-wrapper">
+
+      <h1 class="text__h1">О нас</h1>
+      <img class="text__img-01" src="img/news_img_01.jpg" alt="img_01">
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <p class="text__description">  В случае принятия собранием собственников жилых помещений решения об оснащении коллективными (общедомовыми) приборами учета тепловой энергии, стоимость работ по проектированию и установке приборов учета будет определена СГМУП «ГТС», в соответствии с Федеральным Законом «О контрактной системе в сфере закупок, товаров, работ, услуг для обеспечения государственных и муниципальных нужд» от 05.04.2013г. № 44-ФЗ путем проведения открытого электронного аукциона. </p>
+
+      <h2 class="text__h2">Сервис3</h2>
+      <img class="text__img-02" src="img/news_img_02.jpg" alt="img_02">
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <p class="text__description">  В случае принятия собранием собственников жилых помещений решения об оснащении коллективными (общедомовыми) приборами учета тепловой энергии, стоимость работ по проектированию и установке приборов учета будет определена СГМУП «ГТС», в соответствии с Федеральным Законом «О контрактной системе в сфере закупок, товаров, работ, услуг для обеспечения государственных и муниципальных нужд» от 05.04.2013г. № 44-ФЗ путем проведения открытого электронного аукциона. </p>
+
+      <h3 class="text__h3">Почему именно мы</h3>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <p class="text__description">  В случае принятия собранием собственников жилых помещений решения об оснащении коллективными (общедомовыми) приборами учета тепловой энергии, стоимость работ по проектированию и установке приборов учета будет определена СГМУП «ГТС», в соответствии с Федеральным Законом «О контрактной системе в сфере закупок, товаров, работ, услуг для обеспечения государственных и муниципальных нужд» от 05.04.2013г. № 44-ФЗ путем проведения открытого электронного аукциона. </p>
+      <ul class="text__list-ul">
+        <li class="text__item-ul"><span>Многолетний опыт</span></li>
+        <li class="text__item-ul"><span>Парк оборудования</span></li>
+        <li class="text__item-ul"><span>Работаем с 2001 года</span></li>
+      </ul>
+
+      <h4 class="text__h4">Наши преимущества</h4>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <ol class="text__list-ol">
+        <li class="text__item-ol"><span>Многолетний опыт</span></li>
+        <li class="text__item-ol"><span>Парк оборудования</span></li>
+        <li class="text__item-ol"><span>Работаем с 2001 года</span></li>
+      </ol>
+
+      <h5 class="text__h5">О компании</h5>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <a href="#" class="text__link">Читать подробнее</a>
+
+      <div class="text__table-wrapper">
+        <ul class="text__table list-style-none">
+          <li class="text__table-item text__table-item--title">Сервис3</li>
+          <li class="text__table-item text__table-item--color">Многолетний опыт</li>
+          <li class="text__table-item">Парк оборудования</li>
+          <li class="text__table-item text__table-item--color">Работаем с 2001 года</li>
+        </ul>
+        <ul class="text__table text__table--border list-style-none">
+          <li class="text__table-item text__table-item--title ">Сервис3</li>
+          <li class="text__table-item text__table-item--color">Многолетний опыт</li>
+          <li class="text__table-item">Парк оборудования</li>
+          <li class="text__table-item text__table-item--color">Работаем с 2001 года</li>
+        </ul>
+        <ul class="text__table list-style-none">
+          <li class="text__table-item text__table-item--title ">Сервис3</li>
+          <li class="text__table-item text__table-item--color">Многолетний опыт</li>
+          <li class="text__table-item">Парк оборудования</li>
+          <li class="text__table-item text__table-item--color">Работаем с 2001 года</li>
+        </ul>
+      </div>
+
+      <h6 class="text__h6">Сотрудники</h6>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      </div>
+    </div>
+ </main>
+
+
+    <footer>
+        <nav class="footer-menu">
+            <ul class="footer-menu__list list-style-none">
+                <li class="footer-menu__item"><a href="index.html" class="footer-menu__link">Главная</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">О компании</a></li>
+                <li class="footer-menu__item"><a href="news.html" class="footer-menu__link">Новости</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Вакансии</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Задолженность <br>за ЖКУ</a></li>
+                <li class="footer-menu__item"><a href="faq.html" class="footer-menu__link">Вопрос/ответ</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Стандарты раскрытия информации</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Полезная информация</a></li>
+                <li class="footer-menu__item"><a href="photo-gallery.html" class="footer-menu__link">Фото-галерея</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Отзывы и предложения</a></li>
+                <li class="footer-menu__item"><a href="discussions.html" class="footer-menu__link">Обсуждения</a></li>
+                <li class="footer-menu__item"><a href="contacts.html" class="footer-menu__link">Контакты</a></li>
+            </ul>
+            <ul class="footer-menu-user__list list-style-none">
+                <li class="footer-menu-user__item"><a class="footer-menu-user__link footer-menu-user__link--01" href="#">Оплата услуг ЖКХ</a></li>
+                <li class="footer-menu-user__item"><a class="footer-menu-user__link footer-menu-user__link--02" href="#">Передать показания приборов учета</a></li>
+                <li class="footer-menu-user__item"><a class="footer-menu-user__link footer-menu-user__link--03" href="#">Режим работы</a></li>
+            </ul>
+        </nav>
+        <section class="contacts">
+            <h2 class="visually-hidden">Контакты</h2>
+            <ul class="contacts__sub-list list-style-none">
+              <li class="contacts__sub-item contacts__sub-item--01"><a href="#" class="contacts__sub-link"><span>Версия для слабовидящих</span></a></li>
+              <li class="contacts__sub-item contacts__sub-item--02 popup-enter"><a href="#" class="contacts__sub-link"><span>Вход</span></a></li>
+            </ul>
+            <ul class="contacnts__list list-style-none">
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--01">Адрес:</p>
+                    <p class="contacts__item-description">г.Сургут, ул. Островского, 14/2</p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--02">Телефон:</p>
+                    <p class="contacts__item-description"><a href="tel:8(3462)23-53-53">(3462) 23-53-53</a></p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--03">Эл. почта:</p>
+                    <p class="contacts__item-description"><a href="mailto:secretary@servis3.ru">secretary@servis3.ru</a></p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-title contacts__item-title--04">Факс:</p>
+                    <p class="contacts__item-description"><a href="tel:8(3462)23-53-53">(3462) 23-53-53</a></p>
+                </li>
+            </ul>
+        </section>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <a href="index.html"><img src="img/logo_footer.png" alt="logo" class="footer-logo__img"></a>
+                <p class="footer-logo__description">2001-2018. Все права защищены.</p>
+                <p class="footer-logo__description">ООО Управляющая компания «Сервис-3»</p>
+            </div>
+            <div class="copyright">
+                <a href="http://uralsite.ru/"><img src="img/logo_studio.png" alt="Студия" class="copyright__img"></a>
+                <span class="copyright__description">Создание сайта</span>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="js/reviews.js"></script>
+</body>
+</html>

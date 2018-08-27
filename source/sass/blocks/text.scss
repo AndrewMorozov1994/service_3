@@ -1,0 +1,163 @@
+.text__description {
+  color: #6b7078;
+}
+
+.text__h1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.text__h2 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.text__h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.text__h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.text__h5 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.text__h6 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.text-wrapper {
+  padding-right: 20px;
+  margin-left: 20px;
+}
+
+.text__link {
+  color: #f7811d;
+  border-bottom: 1px solid #f7811d;
+}
+
+.text__item-ul {
+  color: #f7811d;
+
+  span {
+    color: #6b7078;
+  }
+}
+
+.text__table-wrapper {
+  border: 1px solid #d7dee3;
+  margin-top: 20px;
+}
+
+.text__table-item {
+  padding-left: 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+
+  &--color {
+    background-color: #f1f4f9;
+  }
+
+  &--title {
+    height: 85px;
+    font-size: 24px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.text__img-01 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text__img-02 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .text-wrapper {
+    margin-left: 40px;
+    padding-right: 40px;
+  }
+
+  .text__img-01 {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .text__img-02 {
+    float: right;
+    margin-left: 20px;
+  }
+
+  .text__h1 {
+    font-size: 40px;
+  }
+
+  .text__h2 {
+    font-size: 38px;
+  }
+
+  .text__h3 {
+    font-size: 36px;
+  }
+
+  .text__h4 {
+    font-size: 34px;
+  }
+
+  .text__h5 {
+    font-size: 32px;
+  }
+
+  .text__h6 {
+    font-size: 30px;
+  }
+
+  .text__img-01 {
+    width: 328px;
+  }
+
+  .text__img-02 {
+    width: 328px;
+  }
+
+  .text__table-wrapper {
+    display: flex;
+  }
+
+  .text__table {
+    width: 33.33%;
+
+    &--border {
+      border-left: 1px solid #d7dee3;
+      border-right: 1px solid #d7dee3;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .text-wrapper {
+    margin-left: 65px;
+    padding-right: 65px;
+  }
+
+  .text__h1 {
+    margin-top: 150px;
+  }
+
+  .text__table-item {
+    padding-left: 60px;
+  }
+}
