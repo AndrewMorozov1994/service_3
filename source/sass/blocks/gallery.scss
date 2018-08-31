@@ -76,6 +76,21 @@
         background-image: url("../img/gallery_icon_hover.png");
       }
     }
+
+    &--full {
+      position: fixed;
+      top: 10%;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      z-index: 26;
+
+      &:hover {
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
 
   .gallery__img {
