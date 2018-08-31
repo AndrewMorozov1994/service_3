@@ -1,27 +1,40 @@
 (function () {
   'use strict';
 
-  var menuPopup = document.querySelector('.header-menu__list');
-  var menuUserList = document.querySelector('.header-menu-user__list');
-  var headerWrapperMenu = document.querySelector('.header-menu');
-  var mainWrapperMenu = document.querySelector('.main-menu');
+  var menuPopup = document.querySelector(".header-menu__list");
+  var menuUserList = document.querySelector(".header-menu-user__list");
+  var headerWrapperMenu = document.querySelector(".header-menu");
+  var mainWrapperMenu = document.querySelector(".main-menu");
+  var headerPhoneList = document.querySelector(".header-phone__list");
+  var headerPhoneBtn = headerPhoneList.querySelector(".header-phone__list-btn");
 
   var openMenu = function openMenu(e) {
 
-    var btnOpenMenu = e.target.closest('.header-menu__btn');
+    var btnOpenMenu = e.target.closest(".header-menu__btn");
     if (btnOpenMenu === null) {
       return;
     }
     e.preventDefault();
     btnOpenMenu.classList.toggle('header-menu__btn--opened');
-    menuPopup.classList.toggle('header-menu__list--opened');
-    menuUserList.classList.toggle('header-menu-user__list--closed');
+    menuPopup.classList.toggle("header-menu__list--opened");
+    menuUserList.classList.toggle("header-menu-user__list--closed");
   };
 
   var openMenuPopup = function openMenuPopup() {
-    headerWrapperMenu.addEventListener('click', openMenu);
-    mainWrapperMenu.addEventListener('click', openMenu);
+    headerWrapperMenu.addEventListener("click", openMenu);
+    mainWrapperMenu.addEventListener("click", openMenu);
   };
+
+  var openHeaderPhone = function openHeaderPhone() {
+    if (window.matchMedia("(max-width: 1169px)").matches) {
+      headerPhoneList.classList.toggle("header-phone__list--opened");
+    }
+  };
+
+  var openHeaderPhoneItem = function openHeaderPhoneItem() {
+    headerPhoneBtn.addEventListener("click", openHeaderPhone);
+  };
+
   //
   // const headerPopupItemsList = document.querySelector(`.header-popup-item__list`);
   // const headerPopupLinks = headerPopupItemsList.querySelectorAll(`.header-popup-item__item`);
@@ -156,6 +169,102 @@
   openEnterPopup();
   openQuestPopup();
   openMenuPopup();
+  openHeaderPhoneItem();
+
+  var map = document.querySelector('.map');
+  var myMap = void 0;
+
+  var init = function init() {
+
+    myMap = new ymaps.Map('map', {
+      center: [61.257033, 73.398755],
+      zoom: 16
+    });
+    // Создаём макет содержимого.
+
+    var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Сервис-3'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      // Размеры метки.
+      iconImageSize: [30, 35],
+      balloonLayout: "default#imageWithContent",
+      // Картинка балуна
+      balloonImageHref: '../img/logoMap.png',
+      balloonImageSize: [250, 170],
+      balloonImageOffset: [-125, -170]
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+    });
+
+    myMap.geoObjects.add(myPlacemark);
+  };
+
+  ymaps.ready(init);
+
+  // Слайдер галерея
+  var wrap = document.querySelector('.gallery__list-wrapper');
+  var galleryList = wrap.querySelector('.gallery__list');
+  var galleryArray = wrap.querySelectorAll('.gallery__item');
+  var galleryItem = wrap.querySelector('.gallery__item');
+  var nextGalleryBtn = document.querySelector('.slider-arrow__btn--next');
+  var prewFalleryBtn = document.querySelector('.slider-arrow__btn--back');
+
+  // galleryList.style.width = galleryItem.offsetWidth * galleryArray.length + `px`;
+
+  var overlay = document.querySelector('.overlay');
+  var viewFullGalleryItem = function viewFullGalleryItem() {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      var _loop = function _loop(i) {
+        galleryArray[i].addEventListener('click', function () {
+          galleryArray[i].classList.toggle('gallery__item--full');
+          overlay.classList.toggle('overlay--opened');
+
+          document.addEventListener('keydown', function (evt) {
+            if (evt.keyCode === 27) {
+              evt.preventDefault();
+              galleryArray[i].classList.remove('gallery__item--full');
+              overlay.classList.remove('overlay--opened');
+            }
+          });
+        });
+      };
+
+      for (var i = 0; i < galleryArray.length; i++) {
+        _loop(i);
+      }
+    }
+  };
+  viewFullGalleryItem();
+
+  // фуллКартинки service-3__img
+  var serviceList = document.querySelector('.service-3__list');
+  var serviceItems = serviceList.querySelectorAll('.service-3__item');
+
+  var viewFullServiceItem = function viewFullServiceItem() {
+    var _loop2 = function _loop2(i) {
+      serviceItems[i].addEventListener('click', function () {
+        serviceItems[i].classList.toggle('service-3__item--opened');
+        overlay.classList.toggle('overlay--opened');
+
+        document.addEventListener('keydown', function (evt) {
+          if (evt.keyCode === 27) {
+            evt.preventDefault();
+            serviceItems[i].classList.remove('service-3__item--opened');
+            overlay.classList.remove('overlay--opened');
+          }
+        });
+      });
+    };
+
+    for (var i = 0; i < serviceItems.length; i++) {
+      _loop2(i);
+    }
+  };
+  viewFullServiceItem();
 
 }());
 

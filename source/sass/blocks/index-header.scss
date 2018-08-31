@@ -21,6 +21,37 @@
 .header-phone__list {
   text-align: center;
   position: relative;
+
+  &--opened {
+    .header-phone__item {
+      background-color: #ffffff;
+      z-index: 10;
+
+      &:nth-child(3) {
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 113px;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+      }
+
+      &:last-child {
+        position: absolute;
+        display: block;
+        top: 196px;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+    }
+  }
 }
 
 .header-phone__list-btn {
@@ -39,6 +70,8 @@
 }
 
 .header-phone__item {
+  width: 300px;
+
   &:nth-child(2) {
     display: none;
   }
@@ -295,6 +328,13 @@
   .header-phone__list {
     width: 300px;
     margin: 0 auto;
+    padding-top: 30px;
+    min-height: 85px;
+    position: relative;
+  }
+
+  .header-phone__title {
+    margin-top: 0;
   }
 
   .header-menu__list {
@@ -342,6 +382,12 @@
     margin-left: auto;
     margin-top: -80px;
     margin-right: 55px;
+    padding-top: 30px;
+    min-height: 85px;
+  }
+
+  .header-phone__title {
+    margin-top: 0;
   }
 
   .header-popup-item__list {

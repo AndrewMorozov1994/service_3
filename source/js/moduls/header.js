@@ -2,6 +2,8 @@ const menuPopup = document.querySelector(`.header-menu__list`);
 const menuUserList = document.querySelector(`.header-menu-user__list`);
 const headerWrapperMenu = document.querySelector(`.header-menu`);
 const mainWrapperMenu = document.querySelector(`.main-menu`);
+const headerPhoneList = document.querySelector(`.header-phone__list`);
+const headerPhoneBtn = headerPhoneList.querySelector(`.header-phone__list-btn`);
 
 const openMenu = (e) => {
 
@@ -19,6 +21,17 @@ export const openMenuPopup = () => {
   headerWrapperMenu.addEventListener(`click`, openMenu);
   mainWrapperMenu.addEventListener(`click`, openMenu);
 };
+
+const openHeaderPhone = () => {
+  if (window.matchMedia("(max-width: 1169px)").matches) {
+    headerPhoneList.classList.toggle(`header-phone__list--opened`);
+  }
+};
+
+export const openHeaderPhoneItem = () => {
+  headerPhoneBtn.addEventListener(`click`, openHeaderPhone);
+};
+
 //
 // const headerPopupItemsList = document.querySelector(`.header-popup-item__list`);
 // const headerPopupLinks = headerPopupItemsList.querySelectorAll(`.header-popup-item__item`);

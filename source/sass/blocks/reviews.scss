@@ -44,6 +44,22 @@
     position: absolute;
     cursor: pointer;
   }
+
+  &--opened {
+    position: fixed;
+    z-index: 26;
+    top: 10%;
+    width: 300px;
+    left: calc(50% - 150px);
+
+    &:hover::before {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .reviews__list {
@@ -58,7 +74,6 @@
   margin-bottom: 50px;
 }
 
-
 @media (min-width: 1170px) {
   .reviews__list {
     margin-top: 150px;
@@ -67,6 +82,14 @@
   .reviews__item {
     width: 20%;
     margin-bottom: 80px;
+  }
+
+  .reviews__img {
+    &--opened {
+      top: 10%;
+      width: 500px;
+      left: calc(50% - 250px);
+    }
   }
 }
 
