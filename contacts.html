@@ -53,7 +53,7 @@
         <nav class="header-menu">
             <button class="header-menu__btn" type="button"><span class="visually-hidden">Открыть</span></button>
             <ul class="header-menu__list list-style-none">
-                <li class="header-menu__item"><a href="#" class="header-menu__enter"><span>Вход</span></a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__enter popup-enter"><span>Вход</span></a></li>
                 <li class="header-menu__item"><a href="index.html" class="header-menu__link">Главная</a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
                 <li class="header-menu__item"><a href="news.html" class="header-menu__link">Новости</a></li>
@@ -82,6 +82,26 @@
         </div>
     </header>
     <main class="main__wrapper">
+      <nav class="main-menu">
+        <button class="header-menu__btn" type="button"><span class="visually-hidden">Открыть</span></button>
+        <div class="header-logo">
+          <a href="index.html"><img class="header-logo__img" src="img/logo.png" alt="logo"></a>
+          <p class="header-logo__description">Управляющая компания</p>
+        </div>
+        <input type="search" id="main-menu__search">
+        <label for="main-menu__search"></label>
+        <ul class="main-menu__list list-style-none">
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Главная</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">О компании</a></li>
+          <li class="main-menu__item"><a href="news.html" class="main-menu__link">Новости</a></li>
+          <li class="main-menu__item"><a href="photo-gallery.html" class="main-menu__link">Фото-галерея</a></li>
+          <li class="main-menu__item"><a href="faq.html" class="main-menu__link">Вопрос/ответ</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Режим работы</a></li>
+          <li class="main-menu__item"><a href="contacts.html" class="main-menu__link">Контакты</a></li>
+        </ul>
+        <a href="#" class="main-menu__impaired">Версия для соабовидящих</a>
+        <a href="#" class="main-menu__enter popup-enter">Вход</a>
+      </nav>
       <div class="page-contacts">
       <div class="navigation-menu">
         <ul class="navigation-menu__list list-style-none">
@@ -677,6 +697,69 @@
       </div>
     </main>
 
+  <section class="main-modal main-modal--enter">
+    <div class="main-modal__wrapper">
+      <h2 class="main-modal__title">Вход для жильцов</h2>
+      <button class="main-modal__btn"><span class="visually-hidden">Закрыть</span></button>
+      <form action="#">
+        <label for="login"></label>
+        <input type="text" id="login" placeholder="Логин">
+        <label for="password"></label>
+        <input type="password" id="password" placeholder="Пароль">
+        <button class="main-modal-form__btn" type="submit">Войти</button>
+        <a href="#" class="registration">Регистрация</a>
+      </form>
+    </div>
+    <div class="main-modal__overlay"></div>
+  </section>
+
+  <section class="main-modal main-modal--reg">
+    <div class="main-modal__wrapper">
+      <h2 class="main-modal__title">Регистрация</h2>
+      <p class="main-modal__description">Уважаемые собственники, чтобы войти в личный кабинет вам необходимо пройти процедуру регистрации, для получения логина и пароля.</p>
+      <p class="main-modal__description main-modal__description--small">В личном кабинете вы сможете ознакомится с информацией о своем лицевом счете, имеющейся задолжности, приборах учета, а также передать показания по приборам учета.</p>
+      <button class="main-modal__btn"><span class="visually-hidden">Закрыть</span></button>
+      <form action="#">
+        <input type="text" id="number" placeholder="Номер лицевого счета">
+        <label for="number"></label>
+        <input type="email" id="email-reg" placeholder="E-mail">
+        <label for="email-reg"></label>
+        <select id="street">
+          <option value="" disabled selected style="display:none;">Название улицы</option>
+          <option value="1">1</option>
+        </select>
+        <label class="street-label" for="street"></label>
+        <select id="house">
+          <option value="" disabled selected style="display:none;">Номер дома</option>
+          <option value="1">1</option>
+        </select>
+        <label class="house-label" for="house"></label>
+        <input type="text" id="flat" placeholder="Номер квартиры">
+        <label for="flat"></label>
+        <button class="main-modal-form__btn" type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+    <div class="main-modal__overlay"></div>
+  </section>
+
+  <section class="main-modal main-modal--question">
+    <div class="main-modal__wrapper">
+      <h2 class="main-modal__title">Задать вопрос</h2>
+      <p class="main-modal__description">Здесь вы можете задать любой интересующий вас вопрос, и мы ответим на него в самое ближайшее время</p>
+      <button class="main-modal__btn"><span class="visually-hidden">Закрыть</span></button>
+      <form action="#">
+        <input type="text" id="name" placeholder="Имя">
+        <label for="name"></label>
+        <input type="email" id="email-question" placeholder="E-mail">
+        <label for="email-question"></label>
+        <textarea id="area-question" cols="30" rows="6" placeholder="Текст сообщения"></textarea>
+        <label for="area-question"></label>
+        <button class="main-modal-form__btn" type="submit">Отправить</button>
+      </form>
+    </div>
+    <div class="main-modal__overlay"></div>
+  </section>
+
     <footer>
         <nav class="footer-menu">
             <ul class="footer-menu__list list-style-none">
@@ -703,7 +786,7 @@
             <h2 class="visually-hidden">Контакты</h2>
             <ul class="contacts__sub-list list-style-none">
               <li class="contacts__sub-item contacts__sub-item--01"><a href="#" class="contacts__sub-link"><span>Версия для слабовидящих</span></a></li>
-              <li class="contacts__sub-item contacts__sub-item--02"><a href="#" class="contacts__sub-link"><span>Вход</span></a></li>
+              <li class="contacts__sub-item contacts__sub-item--02 popup-enter"><a href="#" class="contacts__sub-link"><span>Вход</span></a></li>
             </ul>
             <ul class="contacnts__list list-style-none">
                 <li class="contacts__item">
@@ -737,6 +820,6 @@
         </div>
     </footer>
 </div>
-    <script src="js/index.js"></script>
+    <script src="js/contacts.js"></script>
 </body>
 </html>

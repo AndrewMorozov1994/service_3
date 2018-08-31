@@ -890,33 +890,47 @@
   .header-popup-item__list {
     flex-direction: row;
     justify-content: space-between;
-    width: 350px;
+    width: 390px;
     margin-right: 50px;
+    margin-top: -135px;
   }
 
   .header-popup-item__description {
-    top: 100px;
-    width: 350px;
+    top: 135px;
+    width: 130px;
     box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 150px;
+  }
+
+  .header-popup-item__img {
+    width: 130px;
   }
 
   .header-popup-item__item {
+    width: 130px;
+    padding-top: 35px;
+
     &:first-child {
       .header-popup-item__description {
+        width: 130px;
         left: 0;
       }
     }
 
     &:nth-child(2) {
       .header-popup-item__description {
-        width: 350px;
-        left: -125px;
+        width: 130px;
+        left: 0;
       }
     }
 
     &:nth-child(3) {
       .header-popup-item__description {
-        left: -250px;
+        width: 130px;
+        left: 0;
       }
     }
   }

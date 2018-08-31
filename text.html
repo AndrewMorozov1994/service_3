@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <title>Сервис-3: Личный кабинет</title>
+    <title>Сервис-3: Обсуждение</title>
 </head>
 <body>
 <div class="body__wrapper">
@@ -63,7 +63,7 @@
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Стандарты раскрытия информации</a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link">Полезная информация</a></li>
                 <li class="header-menu__item"><a href="photo-gallery.html" class="header-menu__link">Фото-галерея</a></li>
-                <li class="header-menu__item"><a href="reviews.html" class="header-menu__link">Отзывы и предложения</a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link">Отзывы и предложения</a></li>
                 <li class="header-menu__item"><a href="discussions.html" class="header-menu__link">Обсуждения</a></li>
                 <li class="header-menu__item"><a href="contacts.html" class="header-menu__link">Контакты</a></li>
             </ul>
@@ -102,188 +102,74 @@
         <a href="#" class="main-menu__impaired">Версия для соабовидящих</a>
         <a href="#" class="main-menu__enter popup-enter">Вход</a>
       </nav>
-      <div class="cabinet">
+      <div class="text">
       <div class="navigation-menu">
         <ul class="navigation-menu__list list-style-none">
           <li class="navigation-menu__item"><a href="index.html" class="navigation-menu__link navigation-menu__link--active"><span>Главная</span></a></li>
-          <li class="navigation-menu__item"><a class="navigation-menu__link"><span>Личный кабинет</span></a></li>
+          <li class="navigation-menu__item"><a class="navigation-menu__link"><span>Текстовый шаблон</span></a></li>
         </ul>
       </div>
-      <h1 class="page-title">Личный кабинет</h1>
-      <p class="cabinet-owner">Уважаемый собственник, Ваша задолженность за ЖКУ <span class="cabinet-owner-color">1 053.21</span>р.</p>
-      <p class="cabinet-debt">Ваш долг: <span>700.57</span>р.</p>
-      <p class="cabinet-fine">Пени: <span>327.56</span>р.</p>
-      <p class="cabinet-request">Просим вас произвести оплату</p>
-      <ul class="cabinet__list list-style-none">
-        <li class="cabinet__item" id="cabinet-pay-anchor">
-          <input class="cabinet-pay-input" type="radio" name="cabinet-radio" id="cabinet-pay" checked>
-          <label class="cabinet-pay-label" for="cabinet-pay">Оплата услуг ЖКХ</label>
-          <div class="cabinet__pay">
-            <form action="#">
-              <div class="cabinet__pay-email">
-                <p class="email-name">E-mail для отправки чека</p>
-                <input type="email" id="cabinet-email" value="alex82@mail.ru">
-                <label for="cabinet-email"></label>
-              </div>
-              <div class="cabinet__personal">
-                <p class="personal-name">Лицевой счет</p>
-                <input type="text" id="cabinet-personal" value="1362236790">
-                <label for="cabinet-personal"></label>
-              </div>
-              <div class="cabinet__sum-pay">
-                <p class="your__debt">Ваш долг за ЖКУ <span>700.57</span> р.</p>
-                <p class="sum-pay-name">Сумма долга к оплате</p>
-                <input type="text" id="sum-pay">
-                <label for="sum-pay"></label>
-                <button class="cabinet__pay-btn" type="submit">Оплатить долг</button>
-              </div>
+      <h1 class="page-title">Текстовый шаблон</h1>
+      <div class="text-wrapper">
 
-              <div class="cabinet__fine-pay">
-                <p class="your__fine">Ваша пеня <span>327.56</span> р.</p>
-                <p class="fine-pay-name">Сумма пени к оплате</p>
-                <input type="text" id="fine-pay">
-                <label for="fine-pay"></label>
-                <button class="cabinet__pay-btn" type="submit">Оплатить пени</button>
-              </div>
+      <h1 class="text__h1">О нас</h1>
+      <img class="text__img-01" src="img/news_img_01.jpg" alt="img_01">
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <p class="text__description">  В случае принятия собранием собственников жилых помещений решения об оснащении коллективными (общедомовыми) приборами учета тепловой энергии, стоимость работ по проектированию и установке приборов учета будет определена СГМУП «ГТС», в соответствии с Федеральным Законом «О контрактной системе в сфере закупок, товаров, работ, услуг для обеспечения государственных и муниципальных нужд» от 05.04.2013г. № 44-ФЗ путем проведения открытого электронного аукциона. </p>
 
-            </form>
-          </div>
-        </li>
-        <li class="cabinet__item" >
-          <input class="cabinet-readings-input" type="radio" name="cabinet-radio" id="cabinet-readings">
-          <label class="cabinet-readings-label" id="cabinet-readings-anchor" for="cabinet-readings"><span>Передать показания приборов учета</span></label>
-          <div class="cabinet__readings">
-              <p class="cabinet__readings-description">На этой странице Вы можете вносить и корректировать показания индивидуальных
-                  (коллективных) приборов учета на текущую дату в период с <span>12 по 20 числа </span>текущего месяца </p>
-              <form action="#">
-                <div class="control-wrapper">
-                  <div class="street">
-                    <p class="street-name">Улица</p>
-                    <select id="street-select">
-                      <option value="Бажова" selected>Бажова</option>
-                    </select>
-                    <label for="street-select"></label>
-                  </div>
-                  <div class="house">
-                    <p class="house-number">Дом</p>
-                    <select id="house-select">
-                      <option value="2 В" selected>2 В</option>
-                    </select>
-                    <label for="house-select"></label>
-                  </div>
-                  <div class="flat">
-                    <p class="flat-name">Квартира</p>
-                    <select id="flat-select">
-                      <option value="6" selected>6</option>
-                    </select>
-                    <label for="flat-select"></label>
-                  </div>
-                </div>
-                <div class="table-wrapper">
-                  <div class="table-number"><p>Показания ИПУ по адресу: Бажова 2 В, 6, № счета: 00000800203000060001</p></div>
-                  <div class="table-main-wrapper">
-                    <ul class="table-row-1 list-style-none">
-                      <li class="table-col-1"><span>Прибор учета</span></li>
-                      <li class="table-col-1"><span>Ед. изм.</span></li>
-                      <li class="table-col-1"><span>Предыдущие показания (дата)</span></li>
-                      <li class="table-col-1"><span>Шкала</span></li>
-                      <li class="table-col-1"><span>Предыдущее значение</span></li>
-                      <li class="table-col-1"><span>Новое значение</span></li>
-                      <li class="table-col-1"><span>Расход</span></li>
-                      <li class="table-col-1"><span>Текущие показания (результат)</span></li>
-                    </ul>
-                    <ul class="table-row-1 list-style-none">
-                      <li class="table-col-1 table-col-1--2"><span>Счетчик горячей воды № 18549859</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>куб.м.</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>24.07.2018</span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span>238.677</span></li>
-                      <li class="table-col-1 table-col-1--2"><span><input class="table-input" type="text" id="hot"></span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                    </ul>
-                    <ul class="table-row-1 list-style-none">
-                      <li class="table-col-1 table-col-1--2"><span>Счетчик холодной воды № 18549859</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>куб.м.</span></li>
-                      <li class="table-col-1 table-col-1--2"><span>24.07.2018</span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span>238.677</span></li>
-                      <li class="table-col-1 table-col-1--2"><span><input class="table-input"type="text" id="colt"></span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                      <li class="table-col-1 table-col-1--2"><span> </span></li>
-                    </ul>
-                  </div>
-                </div>
-                <button class="cabinet__btn" type="submit">Отправить</button>
-              </form>
-            </div>
-        </li>
+      <h2 class="text__h2">Сервис3</h2>
+      <img class="text__img-02" src="img/news_img_02.jpg" alt="img_02">
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <p class="text__description">  В случае принятия собранием собственников жилых помещений решения об оснащении коллективными (общедомовыми) приборами учета тепловой энергии, стоимость работ по проектированию и установке приборов учета будет определена СГМУП «ГТС», в соответствии с Федеральным Законом «О контрактной системе в сфере закупок, товаров, работ, услуг для обеспечения государственных и муниципальных нужд» от 05.04.2013г. № 44-ФЗ путем проведения открытого электронного аукциона. </p>
+
+      <h3 class="text__h3">Почему именно мы</h3>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <p class="text__description">  В случае принятия собранием собственников жилых помещений решения об оснащении коллективными (общедомовыми) приборами учета тепловой энергии, стоимость работ по проектированию и установке приборов учета будет определена СГМУП «ГТС», в соответствии с Федеральным Законом «О контрактной системе в сфере закупок, товаров, работ, услуг для обеспечения государственных и муниципальных нужд» от 05.04.2013г. № 44-ФЗ путем проведения открытого электронного аукциона. </p>
+      <ul class="text__list-ul">
+        <li class="text__item-ul"><span>Многолетний опыт</span></li>
+        <li class="text__item-ul"><span>Парк оборудования</span></li>
+        <li class="text__item-ul"><span>Работаем с 2001 года</span></li>
       </ul>
+
+      <h4 class="text__h4">Наши преимущества</h4>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <ol class="text__list-ol">
+        <li class="text__item-ol"><span>Многолетний опыт</span></li>
+        <li class="text__item-ol"><span>Парк оборудования</span></li>
+        <li class="text__item-ol"><span>Работаем с 2001 года</span></li>
+      </ol>
+
+      <h5 class="text__h5">О компании</h5>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      <a href="#" class="text__link">Читать подробнее</a>
+
+      <div class="text__table-wrapper">
+        <ul class="text__table list-style-none">
+          <li class="text__table-item text__table-item--title">Сервис3</li>
+          <li class="text__table-item text__table-item--color">Многолетний опыт</li>
+          <li class="text__table-item">Парк оборудования</li>
+          <li class="text__table-item text__table-item--color">Работаем с 2001 года</li>
+        </ul>
+        <ul class="text__table text__table--border list-style-none">
+          <li class="text__table-item text__table-item--title ">Сервис3</li>
+          <li class="text__table-item text__table-item--color">Многолетний опыт</li>
+          <li class="text__table-item">Парк оборудования</li>
+          <li class="text__table-item text__table-item--color">Работаем с 2001 года</li>
+        </ul>
+        <ul class="text__table list-style-none">
+          <li class="text__table-item text__table-item--title ">Сервис3</li>
+          <li class="text__table-item text__table-item--color">Многолетний опыт</li>
+          <li class="text__table-item">Парк оборудования</li>
+          <li class="text__table-item text__table-item--color">Работаем с 2001 года</li>
+        </ul>
       </div>
-    </main>
 
-  <section class="main-modal main-modal--enter">
-    <div class="main-modal__wrapper">
-      <h2 class="main-modal__title">Вход для жильцов</h2>
-      <button class="main-modal__btn"><span class="visually-hidden">Закрыть</span></button>
-      <form action="#">
-        <label for="login"></label>
-        <input type="text" id="login" placeholder="Логин">
-        <label for="password"></label>
-        <input type="password" id="password" placeholder="Пароль">
-        <button class="main-modal-form__btn" type="submit">Войти</button>
-        <a href="#" class="registration">Регистрация</a>
-      </form>
+      <h6 class="text__h6">Сотрудники</h6>
+      <p class="text__description">Вам необходимо провести общее собрание собственников жилых помещений, по вопросу оснащения коллективными (общедомовыми) приборами учета тепловой энергии силами СГМУП «ГТС». Управляющая компания в свою очередь, окажет всю необходимую юридическую помощь в подготовке пакета документов для проведения общего собрания.</p>
+      </div>
     </div>
-    <div class="main-modal__overlay"></div>
-  </section>
+ </main>
 
-  <section class="main-modal main-modal--reg">
-    <div class="main-modal__wrapper">
-      <h2 class="main-modal__title">Регистрация</h2>
-      <p class="main-modal__description">Уважаемые собственники, чтобы войти в личный кабинет вам необходимо пройти процедуру регистрации, для получения логина и пароля.</p>
-      <p class="main-modal__description main-modal__description--small">В личном кабинете вы сможете ознакомится с информацией о своем лицевом счете, имеющейся задолжности, приборах учета, а также передать показания по приборам учета.</p>
-      <button class="main-modal__btn"><span class="visually-hidden">Закрыть</span></button>
-      <form action="#">
-        <input type="text" id="number" placeholder="Номер лицевого счета">
-        <label for="number"></label>
-        <input type="email" id="email-reg" placeholder="E-mail">
-        <label for="email-reg"></label>
-        <select id="street">
-          <option value="" disabled selected style="display:none;">Название улицы</option>
-          <option value="1">1</option>
-        </select>
-        <label class="street-label" for="street"></label>
-        <select id="house">
-          <option value="" disabled selected style="display:none;">Номер дома</option>
-          <option value="1">1</option>
-        </select>
-        <label class="house-label" for="house"></label>
-        <input type="text" id="flat" placeholder="Номер квартиры">
-        <label for="flat"></label>
-        <button class="main-modal-form__btn" type="submit">Зарегистрироваться</button>
-      </form>
-    </div>
-    <div class="main-modal__overlay"></div>
-  </section>
-
-  <section class="main-modal main-modal--question">
-    <div class="main-modal__wrapper">
-      <h2 class="main-modal__title">Задать вопрос</h2>
-      <p class="main-modal__description">Здесь вы можете задать любой интересующий вас вопрос, и мы ответим на него в самое ближайшее время</p>
-      <button class="main-modal__btn"><span class="visually-hidden">Закрыть</span></button>
-      <form action="#">
-        <input type="text" id="name" placeholder="Имя">
-        <label for="name"></label>
-        <input type="email" id="email-question" placeholder="E-mail">
-        <label for="email-question"></label>
-        <textarea id="area-question" cols="30" rows="6" placeholder="Текст сообщения"></textarea>
-        <label for="area-question"></label>
-        <button class="main-modal-form__btn" type="submit">Отправить</button>
-      </form>
-    </div>
-    <div class="main-modal__overlay"></div>
-  </section>
 
     <footer>
         <nav class="footer-menu">
@@ -297,7 +183,7 @@
                 <li class="footer-menu__item"><a href="#" class="footer-menu__link">Стандарты раскрытия информации</a></li>
                 <li class="footer-menu__item"><a href="#" class="footer-menu__link">Полезная информация</a></li>
                 <li class="footer-menu__item"><a href="photo-gallery.html" class="footer-menu__link">Фото-галерея</a></li>
-                <li class="footer-menu__item"><a href="reviews.html" class="footer-menu__link">Отзывы и предложения</a></li>
+                <li class="footer-menu__item"><a href="#" class="footer-menu__link">Отзывы и предложения</a></li>
                 <li class="footer-menu__item"><a href="discussions.html" class="footer-menu__link">Обсуждения</a></li>
                 <li class="footer-menu__item"><a href="contacts.html" class="footer-menu__link">Контакты</a></li>
             </ul>
@@ -345,6 +231,6 @@
         </div>
     </footer>
 </div>
-    <script src="js/cabinet.js"></script>
+    <script src="js/reviews.js"></script>
 </body>
 </html>
