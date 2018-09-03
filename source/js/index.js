@@ -60,7 +60,7 @@ nextGalleryBtn[2].addEventListener(`click`, () =>{
 });
 
 prewFalleryBtn[2].addEventListener(`click`, () => {
-  currentSlid = seePrewSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList)
+  currentSlid = seePrewSlide(currentSlid, galleryItem, galleryArray, galleryList)
 });
 
 for (let k = 0; k < galleryArray.length; k++) {
@@ -83,7 +83,7 @@ for (let k = 0; k < galleryArray.length; k++) {
       }, 50);
     }
 
-    function touchEnd(endEvt) {
+    function touchEnd() {
 
       galleryList.removeEventListener('touchmove', touchMove);
 

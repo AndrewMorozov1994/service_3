@@ -1,0 +1,29 @@
+.page-title {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  width: 95%;
+  margin: 20px auto;
+  line-height: 35px;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 36px;
+    text-align: left;
+    margin-left: 40px;
+    line-height: 45px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .page-title {
+    font-size: 42px;
+    color: white;
+    position: relative;
+    margin-left: 65px;
+    margin-top: 20px;
+    line-height: 50px;
+    width: 80%;
+  }
+}

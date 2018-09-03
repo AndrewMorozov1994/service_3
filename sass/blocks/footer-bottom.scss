@@ -25,3 +25,12 @@
     padding-top: 25px;
   }
 }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .footer-bottom {
+    width: 100%;
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+}

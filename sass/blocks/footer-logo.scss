@@ -23,5 +23,10 @@
     text-align: left;
     width: 320px;
   }
+}
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .footer-logo {
+    margin-left: 60px;
+  }
 }

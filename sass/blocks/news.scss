@@ -203,3 +203,13 @@
     width: 470px;
   }
 }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .news {
+    width: 100%;
+  }
+
+  .news__item {
+    width: 100%;
+  }
+}

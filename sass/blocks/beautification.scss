@@ -1,0 +1,84 @@
+
+
+.beautification__dis {
+  display: flex;
+  width: 267px;
+  height: 70px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding-left: 34px;
+  color: #6b7078;
+  margin: 0 auto;
+
+  &::before {
+    display: block;
+    width: 32px;
+    height: 24px;
+    content: "";
+    background-image: url("../img/discussions_icon.png");
+    margin-right: 12px;
+  }
+}
+
+.beautification__dis-color {
+  color: #f7811d;
+  margin-left: 4px;
+}
+
+.beautification__img {
+  height: 330px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/discussions_01.jpg");
+}
+
+.beautification__description {
+  color: #6b7078;
+  width: 90%;
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .beautification__dis {
+    margin-left: 10px;
+  }
+
+  .beautification__img {
+    min-width: 330px;
+    width: 330px;
+    margin-left: 40px;
+    float: left;
+    margin-right: 25px;
+  }
+
+  .beautification__description {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .beautification__dis {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 33px;
+  }
+
+  .beautification__img {
+    margin-left: 65px;
+    margin-right: 40px;
+  }
+
+  .beautification__description {
+    margin-left: 65px;
+  }
+}
+
+@media (min-width: 1575px) {
+  .beautification {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

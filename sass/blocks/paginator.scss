@@ -1,0 +1,41 @@
+.paginator {
+  display: flex;
+  width: 165px;
+  margin: 0 auto;
+}
+
+.paginator-item {
+  border: none;
+  background-color: transparent;
+  display: block;
+  content: "";
+  padding: 0;
+  margin: 0;
+  width: 80px;
+  height: 76px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #acc2d4;
+  cursor: pointer;
+
+  &--back {
+    background-image: url("../img/paginator_arrow_left.png");
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+
+    &:hover, &:active {
+      background-image: url("../img/card-arrow-left_hover.png");
+    }
+  }
+
+  &--next {
+    background-image: url("../img/paginator_arrow_right.png");
+    border-left: none;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+
+    &:hover, &:active {
+      background-image: url("../img/card-arrow-right_hover.png");
+    }
+  }
+}

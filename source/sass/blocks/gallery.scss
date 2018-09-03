@@ -80,10 +80,16 @@
     &--full {
       position: fixed;
       top: 10%;
-      width: 100%;
+      width: 80%;
       max-width: 1000px;
       margin: 0 auto;
-      z-index: 26;
+      z-index: 130;
+      text-align: center;
+
+      .gallery__img {
+        width: 80%;
+        margin: 0 auto;
+      }
 
       &:hover {
         &::before {
