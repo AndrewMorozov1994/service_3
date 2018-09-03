@@ -4,12 +4,14 @@ const questionLinks = document.querySelectorAll(`.question-btn`);
 const questionModal = document.querySelector(`.main-modal--question`);
 const sendLink = questionModal.querySelector(`.main-modal-form__btn`);
 const closeQuestPopupBtn = questionModal.querySelector(`.main-modal__btn`);
+const modalWr = questionModal.querySelector(`.main-modal__wrapper`);
 
 const openQuestPopup = () => {
   for (let i = 0; i < questionLinks.length; i++) {
     questionLinks[i].addEventListener(`click`, (evt) => {
       evt.preventDefault();
       questionModal.classList.add(`main-modal--opened`);
+      modalWr.style.top = window.pageYOffset + 50 + `px`;
 
       sendLink.addEventListener(`click`, closePopup);
       closeQuestPopupBtn.addEventListener(`click`, closePopup);
