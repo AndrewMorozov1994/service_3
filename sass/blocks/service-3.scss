@@ -37,6 +37,17 @@
   &:first-child {
     margin-left: -80px;
   }
+
+  &--opened {
+    position: fixed;
+    top: 10%;
+    width: 300px;
+    z-index: 120;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .service-3__img {
@@ -122,8 +133,20 @@
     &:first-child {
       margin: 0;
     }
-  }
 
+    &--opened {
+      position: fixed;
+      top: 10%;
+      width: 500px;
+      left: calc(50% - 250px);
+
+      &:hover {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1170px) {
@@ -146,5 +169,11 @@
 
   .service-3__img {
     width: 230px;
+  }
+}
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .service-3 {
+    width: 100%;
   }
 }

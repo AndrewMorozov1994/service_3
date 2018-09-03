@@ -1,3 +1,7 @@
+.footer-menu {
+  border-top: 1px solid #d7dee3;
+}
+
 .footer-menu__list {
   width: 300px;
   margin: 0 auto;
@@ -219,5 +223,10 @@
       margin-right: 20px;
     }
   }
+}
 
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .footer-menu {
+    width: 100%;
+  }
 }

@@ -1,3 +1,139 @@
 .main-menu {
   display: none;
 }
+
+@media (min-width: 1560px) {
+  .main__wrapper {
+    position: relative;
+  }
+
+  .main-menu {
+    display: block;
+    width: 366.5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1f4f9;
+    height: 100%;
+    z-index: 35;
+
+    .header-menu__btn {
+      left: 250px;
+      display: block;
+    }
+
+    input {
+      display: block;
+      width: 270px;
+      margin: 0 auto;
+      background-color: #e8eef3;
+      border: none;
+      margin-top: 30px;
+      min-height: 45px;
+      padding-left: 45px;
+    }
+  }
+
+  .main-menu__list {
+    width: 270px;
+    margin: 0 auto;
+  }
+
+  .main-menu__item {
+    border-bottom: 1px solid #d7dee3;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 17px;
+      content: "";
+      width: 9px;
+      height: 17px;
+      background-image: url("../img/arrow_menu.png");
+    }
+
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:hover {
+      border-bottom: 1px solid #f7811d;
+
+      &::after {
+        background-image: url("../img/arrow_menu_hover.png");
+      }
+    }
+
+  }
+
+  .main-menu__impaired {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 270px;
+    padding-left: 100px;
+    min-height: 86px;
+    align-items: center;
+    border: 3px solid #d7dee3;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 18px;
+
+    &:hover {
+      border: 3px solid #f7811d;
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      min-width: 44px;
+      height: 44px;
+      left: 10px;
+      background: no-repeat center center url(../img/version_icon.png);
+    }
+  }
+
+  .main-menu__enter {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 270px;
+    padding-left: 100px;
+    min-height: 86px;
+    align-items: center;
+    border: 3px solid #d7dee3;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 18px;
+
+    &:hover {
+      border: 3px solid #f7811d;;
+    }
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      min-width: 44px;
+      height: 44px;
+      left: 10px;
+      background: no-repeat center center url(../img/enter_icon_01.png);
+    }
+  }
+
+  .main-menu__search-label {
+    position: absolute;
+    top: 165px;
+    left: 60px;
+    display: block;
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/lupe.png);
+  }
+}

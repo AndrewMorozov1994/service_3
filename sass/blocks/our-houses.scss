@@ -80,3 +80,10 @@
     font-size: 46px;
   }
 }
+
+@media (min-width: 1171px) and (max-width: 1574px) {
+  .our-houses {
+    width: 100%;
+    background-size: cover;
+  }
+}
