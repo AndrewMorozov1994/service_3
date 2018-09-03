@@ -1,6 +1,6 @@
 export const seeNextSlide =(offsetSlide, slide, wrapper, arraySlides, slider ) => {
   if (window.matchMedia("(min-width: 768px)").matches){
-    offsetSlide = (offsetSlide - slide.offsetWidth)%(slider.offsetWidth + slide.offsetWidth - wrapper.offsetWidth);
+    offsetSlide = (offsetSlide - slide.offsetWidth)%((slide.offsetWidth * arraySlides.length) + slide.offsetWidth - wrapper.offsetWidth);
   } else {
     offsetSlide = (offsetSlide - slide.offsetWidth)%(slide.offsetWidth * arraySlides.length);
   }
@@ -12,7 +12,7 @@ export const seeNextSlide =(offsetSlide, slide, wrapper, arraySlides, slider ) =
 export const seePrewSlide =(offsetSlide, slide, wrapper, arraySlides, slider) => {
   if (offsetSlide == 0) {
     if (window.matchMedia("(min-width: 768px)").matches) {
-      offsetSlide = -(slider.offsetWidth + slide.offsetWidth - wrapper.offsetWidth)
+      offsetSlide = -((slide.offsetWidth * arraySlides.length) + slide.offsetWidth - wrapper.offsetWidth)
     } else {
       offsetSlide = -(arraySlides.length * slide.offsetWidth);
     }

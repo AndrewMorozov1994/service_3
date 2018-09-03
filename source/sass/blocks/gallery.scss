@@ -20,6 +20,7 @@
 
 .gallery__list {
   display: flex;
+  margin: 0 auto;
 }
 
 .gallery__img {
@@ -51,7 +52,6 @@
   }
 
   .gallery__list-wrapper {
-    width: 100%;
     margin-top: 50px;
   }
 
@@ -101,6 +101,10 @@
 @media (min-width: 1170px) {
   .gallery__title {
     font-size: 46px;
+  }
+
+  .gallery__list-wrapper {
+    max-width: 1170px;
   }
 }
 
