@@ -45,9 +45,13 @@
   position: absolute;
   padding-bottom: 40px;
   display: block;
+<<<<<<< HEAD
+  z-index: 130;
+=======
   z-index: 120;
   top: calc(50% - 300px);
   left: calc(50% - 150px);
+>>>>>>> c99e618b23963aa04294e66506873b02797dd90e
 
   input {
     font-size: 20px;
