@@ -1,0 +1,17 @@
+.button-close-global {
+  width: 60px;
+  height: 60px;
+  display: none;
+  position: fixed;
+  border: none;
+  background-image: url("../img/modal__btn.png");
+  background-color: transparent;
+  background-position: center;
+  top: 0;
+  right: 0;
+  z-index: 150;
+
+  &--opened {
+    display: block;
+  }
+}

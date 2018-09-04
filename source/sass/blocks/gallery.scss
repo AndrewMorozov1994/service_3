@@ -21,6 +21,8 @@
 .gallery__list {
   display: flex;
   margin: 0 auto;
+  margin-left: 0;
+  transition: margin-left 0.5s;
 }
 
 .gallery__img {
@@ -53,14 +55,17 @@
 
   .gallery__list-wrapper {
     margin-top: 50px;
+    width: 100%;
   }
 
   .gallery__list {
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .gallery__item {
     position: relative;
+    min-width: 50%;
 
     &:hover {
       &::before {
@@ -80,7 +85,7 @@
     &--full {
       position: fixed;
       top: 10%;
-      width: 80%;
+      width: 100%;
       max-width: 1000px;
       margin: 0 auto;
       z-index: 130;
