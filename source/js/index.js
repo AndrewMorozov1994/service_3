@@ -11,6 +11,22 @@ openQuestPopup();
 openMenuPopup();
 openHeaderPhoneItem();
 
+const buttonCloseGlobal = document.querySelector(`.button-close-global`);
+
+const nextGalleryBtn = document.querySelectorAll(`.slider-arrow__btn--next`);
+const prewFalleryBtn = document.querySelectorAll(`.slider-arrow__btn--back`);
+
+const globalClose = (i, item, itemSelector) => {
+  buttonCloseGlobal.classList.toggle(`button-close-global--opened`);
+
+  buttonCloseGlobal.addEventListener(`click`, () => {
+    item[i].classList.remove(itemSelector);
+    overlay.classList.remove(`overlay--opened`);
+    buttonCloseGlobal.classList.remove(`button-close-global--opened`);
+    buttonCloseGlobal.removeEventListener(`click`, () => {})
+  })
+};
+
 const map = document.querySelector(`.map`);
 let myMap;
 
@@ -44,14 +60,60 @@ const init = () => {
 };
 
 ymaps.ready(init);
+// Слайдер Новости
+const newsWrap = document.querySelector(`.news__list-wrapper`);
+const newsList = newsWrap.querySelector(`.news__list`);
+const newsArray = newsWrap.querySelectorAll(`.news__item`);
+const newsItem = newsWrap.querySelector(`.news__item`);
+
+let newsSlide = 0;
+
+nextGalleryBtn[0].addEventListener(`click`, () => {
+  newsSlide = seeNextSlide(newsSlide, newsItem, newsWrap, newsArray, newsList);
+});
+prewFalleryBtn[0].addEventListener(`click`, () => {
+  newsSlide = seePrewSlide(newsSlide, newsItem, newsArray, newsList)
+});
+
+for (let j = 0; j < newsArray.length; j++) {
+  newsArray[j].addEventListener('touchstart', function (evt) {
+
+
+    let startX = evt.changedTouches[0].clientX;
+
+    function touchMove(e) {
+
+      let newX = e.changedTouches[0].clientX;
+
+      debounce(function () {
+        if (startX - newX > 0) {
+          newsSlide = seeNextSlide(newsSlide, newsItem, newsWrap, newsArray, newsList);
+        } else {
+          newsSlide = seePrewSlide(newsSlide, newsItem, newsArray, newsList)
+        }
+
+      }, 50);
+    }
+
+    function touchEnd() {
+
+      newsList.removeEventListener('touchmove', touchMove);
+
+      newsList.removeEventListener('touchend', touchEnd);
+    }
+
+    newsList.addEventListener('touchmove', touchMove);
+
+    newsList.addEventListener('touchend', touchEnd);
+
+  });
+}
 
 // Слайдер галерея
 const wrap = document.querySelector(`.gallery__list-wrapper`);
 const galleryList = wrap.querySelector(`.gallery__list`);
 const galleryArray = wrap.querySelectorAll(`.gallery__item`);
 const galleryItem = wrap.querySelector(`.gallery__item`);
-const nextGalleryBtn = document.querySelectorAll(`.slider-arrow__btn--next`);
-const prewFalleryBtn = document.querySelectorAll(`.slider-arrow__btn--back`);
 
 let currentSlid = 0;
 
@@ -77,7 +139,7 @@ for (let k = 0; k < galleryArray.length; k++) {
         if (startX - newX > 0) {
           currentSlid = seeNextSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList)
         } else {
-          currentSlid = seePrewSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList)
+          currentSlid = seePrewSlide(currentSlid, galleryItem, galleryArray, galleryList)
         }
 
       }, 50);
@@ -104,31 +166,28 @@ const a = (i) => {
   overlay.addEventListener(`click`, (evt) => {
     evt.preventDefault();
     galleryArray[i].classList.remove(`gallery__item--full`);
-    galleryArray[i].style.width = wrap.offsetWidth / 2 + `px`;
     overlay.classList.remove(`overlay--opened`);
+    buttonCloseGlobal.classList.remove(`button-close-global--opened`);
   });
 };
 const viewFullGalleryItem = () => {
 
   if (window.matchMedia("(min-width: 768px)").matches) {
 
-    wrap.style.width = document.documentElement.clientWidth + `px`;
-    galleryList.style.width = galleryItem.offsetWidth * galleryArray.length + `px`;
 
     for (let i = 0; i < galleryArray.length; i++) {
-      galleryArray[i].style.width = wrap.offsetWidth / 2 + `px`;
       galleryArray[i].addEventListener(`click`, () => {
-        galleryArray[i].classList.add(`gallery__item--full`);
-        galleryArray[i].style.width = wrap.offsetWidth + `px`;
-        overlay.classList.add(`overlay--opened`);
+        galleryArray[i].classList.toggle(`gallery__item--full`);
+        overlay.classList.toggle(`overlay--opened`);
+        globalClose(i, galleryArray, `gallery__item--full`);
         a(i);
 
         document.addEventListener(`keydown`, (evt) => {
           if (evt.keyCode === 27) {
             evt.preventDefault();
             galleryArray[i].classList.remove(`gallery__item--full`);
-            galleryArray[i].style.width = wrap.offsetWidth / 2 + `px`;
             overlay.classList.remove(`overlay--opened`);
+            buttonCloseGlobal.classList.remove(`button-close-global--opened`);
           }
         })
       });
@@ -149,17 +208,19 @@ const viewFullServiceItem = () => {
   for (let i = 0; i < serviceItems.length; i++) {
     serviceItems[i].addEventListener(`click`, () => {
       serviceItems[i].classList.toggle(`service-3__item--opened`);
+      serviceItems[i].style.top = window.pageYOffset + 50 + `px`;
       overlay.classList.toggle(`overlay--opened`);
+      globalClose(i, serviceItems, `service-3__item--opened`);
 
       document.addEventListener(`keydown`, (evt) => {
         if (evt.keyCode === 27) {
           evt.preventDefault();
           serviceItems[i].classList.remove(`service-3__item--opened`);
           overlay.classList.remove(`overlay--opened`);
+          buttonCloseGlobal.classList.remove(`button-close-global--opened`);
         }
       })
     })
   }
 };
 viewFullServiceItem();
-
