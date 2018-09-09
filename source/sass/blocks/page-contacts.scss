@@ -129,6 +129,7 @@
 
   &::after {
     background-image: url("../img/contacts_arrow_down.png");
+    pointer-events: none;
   }
 }
 

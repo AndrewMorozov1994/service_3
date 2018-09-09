@@ -1,0 +1,19 @@
+.registration {
+  right: 25px;
+  position: absolute;
+  top: 220px;
+}
+
+@media (min-width: 768px) {
+  .registration {
+    right: 70px;
+    top: 200px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .registration {
+    right: 135px;
+    top: 240px;
+  }
+}
