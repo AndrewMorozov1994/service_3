@@ -4,6 +4,7 @@ import {openEnterPopup} from './moduls/popups/enterPopup.js';
 import {openQuestPopup} from './moduls/popups/questionPopup.js';
 import {seeNextSlide, seePrewSlide} from './moduls/sliders.js';
 import {debounce} from './moduls/debounce.js';
+import {globalClose} from './reviews.js'
 
 shiftMenu();
 openEnterPopup();
@@ -15,17 +16,6 @@ const buttonCloseGlobal = document.querySelector(`.button-close-global`);
 
 const nextGalleryBtn = document.querySelectorAll(`.slider-arrow__btn--next`);
 const prewFalleryBtn = document.querySelectorAll(`.slider-arrow__btn--back`);
-
-const globalClose = (i, item, itemSelector) => {
-  buttonCloseGlobal.classList.toggle(`button-close-global--opened`);
-
-  buttonCloseGlobal.addEventListener(`click`, () => {
-    item[i].classList.remove(itemSelector);
-    overlay.classList.remove(`overlay--opened`);
-    buttonCloseGlobal.classList.remove(`button-close-global--opened`);
-    buttonCloseGlobal.removeEventListener(`click`, () => {})
-  })
-};
 
 const map = document.querySelector(`.map`);
 let myMap;
@@ -197,7 +187,6 @@ const viewFullGalleryItem = () => {
 viewFullGalleryItem();
 window.addEventListener(`resize`, () => {
 
-console.log(document.documentElement.clientWidth);
 viewFullGalleryItem();
 });
 // фуллКартинки service-3__img
@@ -208,7 +197,7 @@ const viewFullServiceItem = () => {
   for (let i = 0; i < serviceItems.length; i++) {
     serviceItems[i].addEventListener(`click`, () => {
       serviceItems[i].classList.toggle(`service-3__item--opened`);
-      serviceItems[i].style.top = window.pageYOffset + 50 + `px`;
+      // serviceItems[i].style.top = window.pageYOffset + 50 + `px`;
       overlay.classList.toggle(`overlay--opened`);
       globalClose(i, serviceItems, `service-3__item--opened`);
 
@@ -216,6 +205,7 @@ const viewFullServiceItem = () => {
         if (evt.keyCode === 27) {
           evt.preventDefault();
           serviceItems[i].classList.remove(`service-3__item--opened`);
+          // serviceItems[i].style.top = 0 + `px`;
           overlay.classList.remove(`overlay--opened`);
           buttonCloseGlobal.classList.remove(`button-close-global--opened`);
         }
