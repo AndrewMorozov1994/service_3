@@ -13,7 +13,7 @@
   background-position: top;
   background-repeat: no-repeat;
   min-height: 560px;
-  min-width: 100%;
+  min-width: calc(100vw - 17px);
 }
 
 .our-houses__title {

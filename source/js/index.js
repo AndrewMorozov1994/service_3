@@ -50,6 +50,21 @@ const init = () => {
 };
 
 ymaps.ready(init);
+//Слайдер наши дома
+const ourHousesWrap = document.querySelector(`.our-houses__list-wapper`);
+const ourHousesList = ourHousesWrap.querySelector(`.our-houses__list`);
+const ourHousesArray = ourHousesWrap.querySelectorAll(`.our-houses`);
+const ourHousesItem = ourHousesWrap.querySelector(`.our-houses`);
+
+let ourHoesesSlide = 0;
+
+nextGalleryBtn[1].addEventListener(`click`, () => {
+  ourHoesesSlide = seeNextSlide(ourHoesesSlide, ourHousesItem, ourHousesWrap, ourHousesArray, ourHousesList);
+});
+prewFalleryBtn[1].addEventListener(`click`, () => {
+  ourHoesesSlide = seePrewSlide(ourHoesesSlide, ourHousesItem, ourHousesArray, ourHousesList)
+});
+
 // Слайдер Новости
 const newsWrap = document.querySelector(`.news__list-wrapper`);
 const newsList = newsWrap.querySelector(`.news__list`);
