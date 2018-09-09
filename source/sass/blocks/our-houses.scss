@@ -1,8 +1,19 @@
+.our-houses-main {
+  position: relative;
+  margin-top: 50px;
+}
+
+.our-houses__list {
+  display: flex;
+  overflow-x: hidden;
+}
+
 .our-houses {
   background-image: url("../img/our_houses_background.jpg");
   background-position: top;
   background-repeat: no-repeat;
   min-height: 560px;
+  min-width: 100%;
 }
 
 .our-houses__title {
