@@ -1,4 +1,4 @@
-(function () {
+var reviews = (function (exports) {
   'use strict';
 
   var menuPopup = document.querySelector(".header-menu__list");
@@ -125,9 +125,23 @@
     });
   };
 
+  var buttonCloseGlobal = document.querySelector('.button-close-global');
+
   openMenuPopup();
   shiftMenu();
   openEnterPopup();
+
+  var globalClose = function globalClose(i, item, itemSelector) {
+    buttonCloseGlobal.classList.toggle('button-close-global--opened');
+
+    buttonCloseGlobal.addEventListener('click', function () {
+      item[i].classList.remove(itemSelector);
+      item[i].style.top = 0 + 'px';
+      overlay.classList.remove('overlay--opened');
+      buttonCloseGlobal.classList.remove('button-close-global--opened');
+      buttonCloseGlobal.removeEventListener('click', function () {});
+    });
+  };
 
   var revItems = document.querySelectorAll('.reviews__img');
   var overlay = document.querySelector('.overlay');
@@ -137,12 +151,14 @@
       revItems[i].addEventListener('click', function () {
         revItems[i].classList.toggle('reviews__img--opened');
         overlay.classList.toggle('overlay--opened');
+        globalClose(i, revItems, 'reviews__img--opened');
 
         document.addEventListener('keydown', function (evt) {
           if (evt.keyCode === 27) {
             evt.preventDefault();
             revItems[i].classList.remove('reviews__img--opened');
             overlay.classList.remove('overlay--opened');
+            buttonCloseGlobal.classList.remove('button-close-global--opened');
           }
         });
       });
@@ -154,6 +170,10 @@
   };
   viewFullImg();
 
-}());
+  exports.globalClose = globalClose;
+
+  return exports;
+
+}({}));
 
 //# sourceMappingURL=reviews.js.map

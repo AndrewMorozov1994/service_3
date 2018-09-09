@@ -185,7 +185,7 @@
   var seePrewSlide = function seePrewSlide(offsetSlide, slide, arraySlides, slider) {
     if (offsetSlide === 0) {
       if (window.matchMedia("(min-width: 768px)").matches) {
-        offsetSlide = -(slide.offsetWidth * arraySlides.length - slide.offsetWidth);
+        offsetSlide = -(slide.offsetWidth * arraySlides.length);
       } else {
         offsetSlide = -(arraySlides.length * slide.offsetWidth);
       }
@@ -205,11 +205,61 @@
     lastTimeout = window.setTimeout(fun, interval);
   };
 
+  var buttonCloseGlobal = document.querySelector('.button-close-global');
+
+  openMenuPopup();
+  shiftMenu();
+  openEnterPopup();
+
+  var globalClose = function globalClose(i, item, itemSelector) {
+    buttonCloseGlobal.classList.toggle('button-close-global--opened');
+
+    buttonCloseGlobal.addEventListener('click', function () {
+      item[i].classList.remove(itemSelector);
+      item[i].style.top = 0 + 'px';
+      overlay.classList.remove('overlay--opened');
+      buttonCloseGlobal.classList.remove('button-close-global--opened');
+      buttonCloseGlobal.removeEventListener('click', function () {});
+    });
+  };
+
+  var revItems = document.querySelectorAll('.reviews__img');
+  var overlay = document.querySelector('.overlay');
+
+  var viewFullImg = function viewFullImg() {
+    var _loop = function _loop(i) {
+      revItems[i].addEventListener('click', function () {
+        revItems[i].classList.toggle('reviews__img--opened');
+        overlay.classList.toggle('overlay--opened');
+        globalClose(i, revItems, 'reviews__img--opened');
+
+        document.addEventListener('keydown', function (evt) {
+          if (evt.keyCode === 27) {
+            evt.preventDefault();
+            revItems[i].classList.remove('reviews__img--opened');
+            overlay.classList.remove('overlay--opened');
+            buttonCloseGlobal.classList.remove('button-close-global--opened');
+          }
+        });
+      });
+    };
+
+    for (var i = 0; i < revItems.length; i++) {
+      _loop(i);
+    }
+  };
+  viewFullImg();
+
   shiftMenu();
   openEnterPopup();
   openQuestPopup();
   openMenuPopup();
   openHeaderPhoneItem();
+
+  var buttonCloseGlobal$1 = document.querySelector('.button-close-global');
+
+  var nextGalleryBtn = document.querySelectorAll('.slider-arrow__btn--next');
+  var prewFalleryBtn = document.querySelectorAll('.slider-arrow__btn--back');
 
   var map = document.querySelector('.map');
   var myMap = void 0;
@@ -244,14 +294,72 @@
   };
 
   ymaps.ready(init);
+  //Слайдер наши дома
+  var ourHousesWrap = document.querySelector('.our-houses__list-wapper');
+  var ourHousesList = ourHousesWrap.querySelector('.our-houses__list');
+  var ourHousesArray = ourHousesWrap.querySelectorAll('.our-houses');
+  var ourHousesItem = ourHousesWrap.querySelector('.our-houses');
+
+  var ourHoesesSlide = 0;
+
+  nextGalleryBtn[1].addEventListener('click', function () {
+    ourHoesesSlide = seeNextSlide(ourHoesesSlide, ourHousesItem, ourHousesWrap, ourHousesArray, ourHousesList);
+  });
+  prewFalleryBtn[1].addEventListener('click', function () {
+    ourHoesesSlide = seePrewSlide(ourHoesesSlide, ourHousesItem, ourHousesArray, ourHousesList);
+  });
+
+  // Слайдер Новости
+  var newsWrap = document.querySelector('.news__list-wrapper');
+  var newsList = newsWrap.querySelector('.news__list');
+  var newsArray = newsWrap.querySelectorAll('.news__item');
+  var newsItem = newsWrap.querySelector('.news__item');
+
+  var newsSlide = 0;
+
+  nextGalleryBtn[0].addEventListener('click', function () {
+    newsSlide = seeNextSlide(newsSlide, newsItem, newsWrap, newsArray, newsList);
+  });
+  prewFalleryBtn[0].addEventListener('click', function () {
+    newsSlide = seePrewSlide(newsSlide, newsItem, newsArray, newsList);
+  });
+
+  for (var j = 0; j < newsArray.length; j++) {
+    newsArray[j].addEventListener('touchstart', function (evt) {
+
+      var startX = evt.changedTouches[0].clientX;
+
+      function touchMove(e) {
+
+        var newX = e.changedTouches[0].clientX;
+
+        debounce(function () {
+          if (startX - newX > 0) {
+            newsSlide = seeNextSlide(newsSlide, newsItem, newsWrap, newsArray, newsList);
+          } else {
+            newsSlide = seePrewSlide(newsSlide, newsItem, newsArray, newsList);
+          }
+        }, 50);
+      }
+
+      function touchEnd() {
+
+        newsList.removeEventListener('touchmove', touchMove);
+
+        newsList.removeEventListener('touchend', touchEnd);
+      }
+
+      newsList.addEventListener('touchmove', touchMove);
+
+      newsList.addEventListener('touchend', touchEnd);
+    });
+  }
 
   // Слайдер галерея
   var wrap = document.querySelector('.gallery__list-wrapper');
   var galleryList = wrap.querySelector('.gallery__list');
   var galleryArray = wrap.querySelectorAll('.gallery__item');
   var galleryItem = wrap.querySelector('.gallery__item');
-  var nextGalleryBtn = document.querySelectorAll('.slider-arrow__btn--next');
-  var prewFalleryBtn = document.querySelectorAll('.slider-arrow__btn--back');
 
   var currentSlid = 0;
 
@@ -276,7 +384,7 @@
           if (startX - newX > 0) {
             currentSlid = seeNextSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList);
           } else {
-            currentSlid = seePrewSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList);
+            currentSlid = seePrewSlide(currentSlid, galleryItem, galleryArray, galleryList);
           }
         }, 50);
       }
@@ -294,37 +402,32 @@
     });
   }
 
-  var overlay = document.querySelector('.overlay');
+  var overlay$1 = document.querySelector('.overlay');
 
   var a = function a(i) {
-    overlay.addEventListener('click', function (evt) {
+    overlay$1.addEventListener('click', function (evt) {
       evt.preventDefault();
       galleryArray[i].classList.remove('gallery__item--full');
-      galleryArray[i].style.width = wrap.offsetWidth / 2 + 'px';
-      overlay.classList.remove('overlay--opened');
+      overlay$1.classList.remove('overlay--opened');
+      buttonCloseGlobal$1.classList.remove('button-close-global--opened');
     });
   };
   var viewFullGalleryItem = function viewFullGalleryItem() {
 
     if (window.matchMedia("(min-width: 768px)").matches) {
-
-      wrap.style.width = document.documentElement.clientWidth + 'px';
-      galleryList.style.width = galleryItem.offsetWidth * galleryArray.length + 'px';
-
       var _loop = function _loop(i) {
-        galleryArray[i].style.width = wrap.offsetWidth / 2 + 'px';
         galleryArray[i].addEventListener('click', function () {
-          galleryArray[i].classList.add('gallery__item--full');
-          galleryArray[i].style.width = wrap.offsetWidth + 'px';
-          overlay.classList.add('overlay--opened');
+          galleryArray[i].classList.toggle('gallery__item--full');
+          overlay$1.classList.toggle('overlay--opened');
+          globalClose(i, galleryArray, 'gallery__item--full');
           a(i);
 
           document.addEventListener('keydown', function (evt) {
             if (evt.keyCode === 27) {
               evt.preventDefault();
               galleryArray[i].classList.remove('gallery__item--full');
-              galleryArray[i].style.width = wrap.offsetWidth / 2 + 'px';
-              overlay.classList.remove('overlay--opened');
+              overlay$1.classList.remove('overlay--opened');
+              buttonCloseGlobal$1.classList.remove('button-close-global--opened');
             }
           });
         });
@@ -338,7 +441,6 @@
   viewFullGalleryItem();
   window.addEventListener('resize', function () {
 
-    console.log(document.documentElement.clientWidth);
     viewFullGalleryItem();
   });
   // фуллКартинки service-3__img
@@ -349,13 +451,17 @@
     var _loop2 = function _loop2(i) {
       serviceItems[i].addEventListener('click', function () {
         serviceItems[i].classList.toggle('service-3__item--opened');
-        overlay.classList.toggle('overlay--opened');
+        // serviceItems[i].style.top = window.pageYOffset + 50 + `px`;
+        overlay$1.classList.toggle('overlay--opened');
+        globalClose(i, serviceItems, 'service-3__item--opened');
 
         document.addEventListener('keydown', function (evt) {
           if (evt.keyCode === 27) {
             evt.preventDefault();
             serviceItems[i].classList.remove('service-3__item--opened');
-            overlay.classList.remove('overlay--opened');
+            // serviceItems[i].style.top = 0 + `px`;
+            overlay$1.classList.remove('overlay--opened');
+            buttonCloseGlobal$1.classList.remove('button-close-global--opened');
           }
         });
       });

@@ -316,6 +316,21 @@ template {
 [hidden] {
   display: none; }
 
+.button-close-global {
+  width: 60px;
+  height: 60px;
+  display: none;
+  position: fixed;
+  border: none;
+  background-image: url("../img/modal__btn.png");
+  background-color: transparent;
+  background-position: center;
+  top: 0;
+  right: 0;
+  z-index: 150; }
+  .button-close-global--opened {
+    display: block; }
+
 .list-style-none {
   list-style: none;
   margin: 0;
@@ -348,27 +363,23 @@ template {
 .header-phone__list {
   text-align: center;
   position: relative; }
-  .header-phone__list--opened .header-phone__item {
-    background-color: #ffffff;
-    z-index: 10; }
-    .header-phone__list--opened .header-phone__item:nth-child(3) {
-      border-right: 2px solid black;
-      border-left: 2px solid black;
-      border-top: 2px solid black; }
-    .header-phone__list--opened .header-phone__item:nth-child(2) {
-      position: absolute;
-      display: block;
-      left: 0;
-      top: 113px;
-      border-right: 2px solid black;
-      border-left: 2px solid black; }
-    .header-phone__list--opened .header-phone__item:last-child {
-      position: absolute;
-      display: block;
-      top: 196px;
-      border-right: 2px solid black;
-      border-left: 2px solid black;
-      border-bottom: 2px solid black; }
+  .header-phone__list--opened {
+    min-height: 320px;
+    outline: 3px solid #f7811d; }
+    .header-phone__list--opened .header-phone__item {
+      background-color: #ffffff;
+      z-index: 10;
+      min-height: 85px; }
+      .header-phone__list--opened .header-phone__item:nth-child(2) {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 90px; }
+      .header-phone__list--opened .header-phone__item:last-child {
+        position: absolute;
+        display: block;
+        top: 196px;
+        padding-bottom: 10px; }
 
 .header-phone__list-btn {
   position: absolute;
@@ -567,8 +578,11 @@ template {
     width: 300px;
     margin: 0 auto;
     padding-top: 30px;
-    min-height: 85px;
     position: relative; }
+    .header-phone__list--opened .header-phone__item:nth-child(2) {
+      top: 130px; }
+    .header-phone__list--opened .header-phone__item:last-child {
+      top: 230px; }
   .header-phone__title {
     margin-top: 0; }
   .header-menu__list {
@@ -601,8 +615,13 @@ template {
     margin-left: auto;
     margin-top: -80px;
     margin-right: 55px;
-    padding-top: 30px;
-    min-height: 85px; }
+    padding-top: 30px; }
+    .header-phone__list .header-phone__item {
+      width: 290px; }
+    .header-phone__list--opened .header-phone__item:nth-child(2) {
+      top: 130px; }
+    .header-phone__list--opened .header-phone__item:last-child {
+      top: 230px; }
   .header-phone__title {
     margin-top: 0; }
   .header-popup-item__list {
@@ -1396,6 +1415,21 @@ template {
   .user-menu__link {
     padding-left: 15%; } }
 
+.registration {
+  right: 25px;
+  position: absolute;
+  top: 220px; }
+
+@media (min-width: 768px) {
+  .registration {
+    right: 70px;
+    top: 200px; } }
+
+@media (min-width: 1170px) {
+  .registration {
+    right: 135px;
+    top: 240px; } }
+
 .news {
   width: 320px;
   margin: 0 auto;
@@ -1440,7 +1474,10 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 320px; }
+  width: 320px;
+  margin-left: 0;
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s; }
 
 .news__item {
   margin-right: 20px; }
@@ -1568,7 +1605,7 @@ template {
     background-image: url("../img/slider_arrow_back_grey.png"); }
 
 .slider-arrow--our-houses {
-  margin-top: 30px; }
+  margin-top: -100px; }
   .slider-arrow--our-houses .slider-arrow__btn {
     border: 1px solid white; }
     .slider-arrow--our-houses .slider-arrow__btn--next {
@@ -1584,16 +1621,30 @@ template {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0; }
+  .slider-arrow--our-houses {
+    margin-top: -140px;
+    margin-bottom: 50px; }
   .slider-arrow__btn--next:hover {
     background-image: url("../img/slider_arrow_next_hover.png"); }
   .slider-arrow__btn--back:hover {
     background-image: url("../img/slider_arrow_back_hover.png"); } }
 
+.our-houses-main {
+  position: relative;
+  margin-top: 50px; }
+
+.our-houses__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden; }
+
 .our-houses {
   background-image: url("../img/our_houses_background.jpg");
   background-position: top;
   background-repeat: no-repeat;
-  min-height: 560px; }
+  min-height: 560px;
+  min-width: calc(100vw - 17px); }
 
 .our-houses__title {
   font-size: 30px;
@@ -1826,7 +1877,10 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-left: 0;
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s; }
 
 .gallery__img {
   width: 320px;
@@ -1847,13 +1901,16 @@ template {
   .gallery__title {
     font-size: 32px; }
   .gallery__list-wrapper {
-    margin-top: 50px; }
+    margin-top: 50px;
+    width: 100%; }
   .gallery__list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%; }
   .gallery__item {
-    position: relative; }
+    position: relative;
+    min-width: 50%; }
     .gallery__item:hover::before {
       display: block;
       position: absolute;
@@ -1868,7 +1925,7 @@ template {
     .gallery__item--full {
       position: fixed;
       top: 10%;
-      width: 80%;
+      width: 100%;
       max-width: 1000px;
       margin: 0 auto;
       z-index: 130;
@@ -4114,7 +4171,8 @@ template {
   display: none; }
 
 .page-contacts-radio-input:checked ~ .page-contacts-radio-turn::after {
-  background-image: url("../img/contacts_arrow_down.png"); }
+  background-image: url("../img/contacts_arrow_down.png");
+  pointer-events: none; }
 
 .page-contacts__sub-list {
   margin: 0 20px;
