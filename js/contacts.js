@@ -25,6 +25,16 @@
     mainWrapperMenu.addEventListener("click", openMenu);
   };
 
+  var openHeaderPhone = function openHeaderPhone() {
+    if (window.matchMedia("(max-width: 1169px)").matches) {
+      headerPhoneList.classList.toggle("header-phone__list--opened");
+    }
+  };
+
+  var openHeaderPhoneItem = function openHeaderPhoneItem() {
+    headerPhoneBtn.addEventListener("click", openHeaderPhone);
+  };
+
   //
   // const headerPopupItemsList = document.querySelector(`.header-popup-item__list`);
   // const headerPopupLinks = headerPopupItemsList.querySelectorAll(`.header-popup-item__item`);
@@ -128,6 +138,7 @@
   openMenuPopup();
   shiftMenu();
   openEnterPopup();
+  openHeaderPhoneItem();
 
   var wrapper = document.querySelector('.page-contacts__sub-list');
 

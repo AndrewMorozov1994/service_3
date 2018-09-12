@@ -1637,6 +1637,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s; }
+
+.our-houses__list-wapper {
+  width: 100%;
   overflow-x: hidden; }
 
 .our-houses {
@@ -1644,7 +1650,7 @@ template {
   background-position: top;
   background-repeat: no-repeat;
   min-height: 560px;
-  min-width: calc(100vw - 17px); }
+  min-width: 100%; }
 
 .our-houses__title {
   font-size: 30px;

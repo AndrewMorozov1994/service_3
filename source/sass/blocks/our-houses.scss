@@ -5,6 +5,12 @@
 
 .our-houses__list {
   display: flex;
+  width: 100%;
+  transition: margin-left 0.5s;
+}
+
+.our-houses__list-wapper {
+  width: 100%;
   overflow-x: hidden;
 }
 

@@ -2,7 +2,7 @@ import {openMenuPopup, openHeaderPhoneItem} from './moduls/header.js';
 import {shiftMenu} from './moduls/menu.js';
 import {openEnterPopup} from './moduls/popups/enterPopup.js';
 import {openQuestPopup} from './moduls/popups/questionPopup.js';
-import {seeNextSlide, seePrewSlide} from './moduls/sliders.js';
+import {seeNextSlide, seePrewSlide, seeNextSlideGallery, seePrewSlideGallery, touchSlider} from './moduls/sliders.js';
 import {debounce} from './moduls/debounce.js';
 import {globalClose} from './reviews.js'
 
@@ -65,6 +65,8 @@ prewFalleryBtn[1].addEventListener(`click`, () => {
   ourHoesesSlide = seePrewSlide(ourHoesesSlide, ourHousesItem, ourHousesArray, ourHousesList)
 });
 
+touchSlider(ourHoesesSlide, ourHousesItem, ourHousesWrap, ourHousesArray, ourHousesList);
+
 // Слайдер Новости
 const newsWrap = document.querySelector(`.news__list-wrapper`);
 const newsList = newsWrap.querySelector(`.news__list`);
@@ -80,39 +82,7 @@ prewFalleryBtn[0].addEventListener(`click`, () => {
   newsSlide = seePrewSlide(newsSlide, newsItem, newsArray, newsList)
 });
 
-for (let j = 0; j < newsArray.length; j++) {
-  newsArray[j].addEventListener('touchstart', function (evt) {
-
-
-    let startX = evt.changedTouches[0].clientX;
-
-    function touchMove(e) {
-
-      let newX = e.changedTouches[0].clientX;
-
-      debounce(function () {
-        if (startX - newX > 0) {
-          newsSlide = seeNextSlide(newsSlide, newsItem, newsWrap, newsArray, newsList);
-        } else {
-          newsSlide = seePrewSlide(newsSlide, newsItem, newsArray, newsList)
-        }
-
-      }, 50);
-    }
-
-    function touchEnd() {
-
-      newsList.removeEventListener('touchmove', touchMove);
-
-      newsList.removeEventListener('touchend', touchEnd);
-    }
-
-    newsList.addEventListener('touchmove', touchMove);
-
-    newsList.addEventListener('touchend', touchEnd);
-
-  });
-}
+touchSlider(newsSlide, newsItem, newsWrap, newsArray, newsList);
 
 // Слайдер галерея
 const wrap = document.querySelector(`.gallery__list-wrapper`);
@@ -123,11 +93,11 @@ const galleryItem = wrap.querySelector(`.gallery__item`);
 let currentSlid = 0;
 
 nextGalleryBtn[2].addEventListener(`click`, () =>{
-  currentSlid = seeNextSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList)
+  currentSlid = seeNextSlideGallery(currentSlid, galleryItem, wrap, galleryArray, galleryList)
 });
 
 prewFalleryBtn[2].addEventListener(`click`, () => {
-  currentSlid = seePrewSlide(currentSlid, galleryItem, galleryArray, galleryList)
+  currentSlid = seePrewSlideGallery(currentSlid, galleryItem, galleryArray, galleryList)
 });
 
 for (let k = 0; k < galleryArray.length; k++) {
@@ -142,12 +112,12 @@ for (let k = 0; k < galleryArray.length; k++) {
 
       debounce(function () {
         if (startX - newX > 0) {
-          currentSlid = seeNextSlide(currentSlid, galleryItem, wrap, galleryArray, galleryList)
+          currentSlid = seeNextSlideGallery(currentSlid, galleryItem, wrap, galleryArray, galleryList)
         } else {
-          currentSlid = seePrewSlide(currentSlid, galleryItem, galleryArray, galleryList)
+          currentSlid = seePrewSlideGallery(currentSlid, galleryItem, galleryArray, galleryList)
         }
 
-      }, 50);
+      }, 100);
     }
 
     function touchEnd() {
