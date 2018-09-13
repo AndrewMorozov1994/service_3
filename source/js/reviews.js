@@ -1,4 +1,4 @@
-import {openMenuPopup} from './moduls/header.js';
+import {openMenuPopup, openHeaderPhoneItem} from './moduls/header.js';
 import {shiftMenu} from './moduls/menu.js';
 import {openEnterPopup} from './moduls/popups/enterPopup.js';
 const buttonCloseGlobal = document.querySelector(`.button-close-global`);
@@ -6,6 +6,7 @@ const buttonCloseGlobal = document.querySelector(`.button-close-global`);
 openMenuPopup();
 shiftMenu();
 openEnterPopup();
+openHeaderPhoneItem();
 
 export const globalClose = (i, item, itemSelector) => {
   buttonCloseGlobal.classList.toggle(`button-close-global--opened`);
