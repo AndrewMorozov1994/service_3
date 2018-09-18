@@ -199,3 +199,32 @@ const viewFullServiceItem = () => {
   }
 };
 viewFullServiceItem();
+
+let sl = 0;
+
+for (const val of serviceItems) {
+  val.addEventListener('touchstart', function (evt) {
+
+
+    let startX = evt.changedTouches[0].clientX;
+
+    function touchMove(e) {
+
+      let newX = e.changedTouches[0].clientX;
+
+          serviceList.style.marginLeft = newX - startX + `px`;
+    }
+
+    function touchEnd() {
+
+      serviceList.removeEventListener('touchmove', touchMove);
+
+      serviceList.removeEventListener('touchend', touchEnd);
+    }
+
+    serviceList.addEventListener('touchmove', touchMove);
+
+    serviceList.addEventListener('touchend', touchEnd);
+
+  });
+}

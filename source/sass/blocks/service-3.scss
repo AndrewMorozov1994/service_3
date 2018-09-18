@@ -20,7 +20,7 @@
 
 .service-3__list-wrapper {
   width: 160px;
-  overflow: visible;
+  overflow: hidden;
   margin: 50px auto;
   padding-bottom: 50px;
   margin-bottom: 0;
@@ -28,7 +28,6 @@
 
 .service-3__list {
   width: 320px;
-  overflow: hidden;
   display: flex;
   margin-left: -80px;
 }
@@ -43,6 +42,7 @@
     top: 10%;
     width: 300px;
     z-index: 120;
+    left: calc(50% - 150px);
 
     img {
       width: 100%;
