@@ -882,6 +882,9 @@
   }
 
   .index-header {
+    width: 100%;
+    background-size: cover;
+
     .header-logo {
       display: none;
     }
@@ -949,5 +952,11 @@
         left: 0;
       }
     }
+  }
+}
+
+@media (min-width: 1921px) {
+  .index-header {
+    width: 1170px;
   }
 }
