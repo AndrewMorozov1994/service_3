@@ -101,16 +101,16 @@ prewFalleryBtn[2].addEventListener(`click`, () => {
 });
 
 for (let k = 0; k < galleryArray.length; k++) {
-  galleryArray[k].addEventListener('touchstart', function (evt) {
+  galleryArray[k].addEventListener('touchstart', (evt) => {
 
 
     let startX = evt.changedTouches[0].clientX;
 
-    function touchMove(e) {
+    const touchMove = (e) => {
 
       let newX = e.changedTouches[0].clientX;
 
-      debounce(function () {
+      debounce(() => {
         if (startX - newX > 0) {
           currentSlid = seeNextSlideGallery(currentSlid, galleryItem, wrap, galleryArray, galleryList)
         } else {
@@ -118,14 +118,14 @@ for (let k = 0; k < galleryArray.length; k++) {
         }
 
       }, 100);
-    }
+    };
 
-    function touchEnd() {
+    const touchEnd = () => {
 
       galleryList.removeEventListener('touchmove', touchMove);
 
       galleryList.removeEventListener('touchend', touchEnd);
-    }
+    };
 
     galleryList.addEventListener('touchmove', touchMove);
 
@@ -203,24 +203,24 @@ viewFullServiceItem();
 let sl = 0;
 
 for (const val of serviceItems) {
-  val.addEventListener('touchstart', function (evt) {
+  val.addEventListener('touchstart', (evt) => {
 
 
     let startX = evt.changedTouches[0].clientX;
 
-    function touchMove(e) {
+    const touchMove = (e) => {
 
       let newX = e.changedTouches[0].clientX;
 
           serviceList.style.marginLeft = newX - startX + `px`;
-    }
+    };
 
-    function touchEnd() {
+    const touchEnd = () => {
 
       serviceList.removeEventListener('touchmove', touchMove);
 
       serviceList.removeEventListener('touchend', touchEnd);
-    }
+    };
 
     serviceList.addEventListener('touchmove', touchMove);
 

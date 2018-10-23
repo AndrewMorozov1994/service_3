@@ -37,7 +37,7 @@ export const seeNextSlideGallery =(offsetSlide, slide, wrapper, arraySlides, sli
   return offsetSlide;
 };
 
-export const seePrewSlideGallery =(offsetSlide, slide, arraySlides, slider) => {
+export const seePrewSlideGallery = (offsetSlide, slide, arraySlides, slider) => {
   if (offsetSlide === 0) {
     if (window.matchMedia("(min-width: 768px)").matches) {
       offsetSlide = -((slide.offsetWidth * arraySlides.length) - slide.offsetWidth)
@@ -54,16 +54,16 @@ export const seePrewSlideGallery =(offsetSlide, slide, arraySlides, slider) => {
 
 export const touchSlider = (offsetSlide, slide, wrapper, arraySlides, slider) => {
   for (let j = 0; j < arraySlides.length; j++) {
-    arraySlides[j].addEventListener('touchstart', function (evt) {
+    arraySlides[j].addEventListener('touchstart', (evt) => {
 
 
       let startX = evt.changedTouches[0].clientX;
 
-      function touchMove(e) {
+      const touchMove = (e) => {
 
         let newX = e.changedTouches[0].clientX;
 
-        debounce(function () {
+        debounce(() => {
           if (startX - newX > 0) {
             offsetSlide = seeNextSlide(offsetSlide, slide, wrapper, arraySlides, slider);
           } else {
@@ -71,14 +71,14 @@ export const touchSlider = (offsetSlide, slide, wrapper, arraySlides, slider) =>
           }
 
         }, 100);
-      }
+      };
 
-      function touchEnd() {
+      const touchEnd = () => {
 
         slider.removeEventListener('touchmove', touchMove);
 
         slider.removeEventListener('touchend', touchEnd);
-      }
+      };
 
       slider.addEventListener('touchmove', touchMove);
 
